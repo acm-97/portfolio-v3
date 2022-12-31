@@ -19,16 +19,15 @@ const Link = ({
   className = '',
   external = true,
 }: LinkProps) =>
-  external ? (
+  !external ? (
     <a href={href} onClick={onClick} className={classnames(underline && 'underline', className)}>
       {children}
     </a>
   ) : (
     <a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={onClick}
+      // target="_blank"
+      // rel="noopener noreferrer"
       className={classnames(underline && 'underline', className)}
     >
       {children}

@@ -54,10 +54,6 @@ ul.skills-list li::before {
   max-height: 18.75rem;
   border: 1px solid transparent;
   border-radius: 0.7rem;
-  background-image: url('/public/profile.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   transition: 0.5s;
   z-index: 1;
   overflow: hidden;

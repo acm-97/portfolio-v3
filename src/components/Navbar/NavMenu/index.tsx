@@ -5,15 +5,26 @@ import classnames from 'classnames';
 import { routes } from '@/constants';
 import { Icon, Link } from '@/components';
 
-type NavMenuProps = { horizontal?: boolean; className?: string };
+type NavMenuProps = {
+  horizontal?: boolean;
+  className?: string;
+  drawerInput?: HTMLInputElement | null;
+  handleDrawer?: (checked: boolean) => void;
+};
 
-const NavMenu = ({ className = '', horizontal = false }: NavMenuProps) => {
+const NavMenu = ({ className = '', horizontal = false, drawerInput, handleDrawer }: NavMenuProps) => {
   const { t, i18n } = useTranslation('common');
   const [active, setActive] = useState(window.location.pathname);
 
   const menuStyles = horizontal
     ? 'menu-horizontal'
     : 'w-80 bg-base-100 p-4 flex-col justify-center items-center text-3xl';
+
+  const onClick = (path: string) => {
+    setActive(path);
+    if (drawerInput?.checked) drawerInput.checked = false;
+    handleDrawer && handleDrawer(false);
+  };
 
   const handleLanguage = async () => {
     if (i18n.language === 'en') await i18n.changeLanguage('es');
@@ -27,12 +38,12 @@ const NavMenu = ({ className = '', horizontal = false }: NavMenuProps) => {
           <Link
             external={false}
             className={classnames(
-              !horizontal && 'flex flex-col ',
+              !horizontal && 'flex flex-col',
               active === route.path && 'sec-color',
-              'gap-1 p-0  hover:bg-transparent focus:bg-transparent',
+              '  gap-1  p-0 hover:bg-transparent focus:bg-transparent',
             )}
             href={route.path}
-            onClick={() => setActive(route.path)}
+            onClick={() => onClick(route.path)}
           >
             <span className="sec-color p-0">{`0${i + 1}.`}</span> {t(route.name.toLowerCase())}
           </Link>

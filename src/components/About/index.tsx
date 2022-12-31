@@ -39,10 +39,11 @@ const About = () => {
           <div className="profile-img-container">
             <div className="profile-img-frame">
               <div className="opacity-0">
-                <div className="profile-img" />
+                <img alt="profile.png" src="/profile.png" />
               </div>
             </div>
             <div className="profile-img">
+              <img alt="profile.png" src="/profile.png" />
               <div className="tag-name">{t('fullName')}</div>
               <div className="tag-occupation">{t('occupation')}</div>
             </div>

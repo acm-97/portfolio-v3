@@ -1,4 +1,4 @@
-import { memo, ReactNode, useRef } from 'react';
+import { memo, ReactNode, useRef, useEffect, useState } from 'react';
 
 import NavMenu from './NavMenu';
 
@@ -11,10 +11,10 @@ type NavBarProps = { children: ReactNode };
 
 const Navbar = ({ children }: NavBarProps) => {
   const refDrawer = useRef<HTMLDivElement>(null);
+  const refDrawerInput = useRef<HTMLInputElement>(null);
+  const [drawerInput, setDrawerInput] = useState<HTMLInputElement | null>(null);
 
-  const onChecked = (e: any) => {
-    const { checked } = e.target;
-
+  const handleChecked = (checked: boolean) => {
     if (checked && refDrawer?.current) {
       refDrawer.current.style.height = '100dvh';
     } else if (refDrawer?.current) refDrawer.current.style.height = '100%';
@@ -27,10 +27,18 @@ const Navbar = ({ children }: NavBarProps) => {
       : (window.location.hash = '');
   };
 
+  useEffect(() => setDrawerInput(refDrawerInput.current), [refDrawerInput]);
+
   return (
     <>
       <div className="drawer drawer-end h-full flex-col" ref={refDrawer}>
-        <input id="my-drawer-3" type="checkbox" className="drawer-toggle" onClick={onChecked} />
+        <input
+          id="my-drawer-3"
+          type="checkbox"
+          className="drawer-toggle"
+          onClick={(e: any) => handleChecked(e.target.checked)}
+          ref={refDrawerInput}
+        />
         <div className="drawer-content flex h-full w-full">
           {/* <!-- Navbar --> */}
           <div className="navbar-fixed navbar h-16 w-full bg-base-100 px-4 text-sm sm:px-9">
@@ -60,7 +68,7 @@ const Navbar = ({ children }: NavBarProps) => {
         <div className="drawer-side md:hidden">
           {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label htmlFor="my-drawer-3" className="drawer-overlay" />
-          <NavMenu />
+          <NavMenu drawerInput={drawerInput} handleDrawer={handleChecked} />
         </div>
       </div>
 
