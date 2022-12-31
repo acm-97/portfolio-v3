@@ -43,7 +43,7 @@ const Icon = ({ name }: IconProps) => {
 };
 
 const IconRender = ({ name, href, className = '', base = false }: IconRenderProps) => (
-  <div className={classnames('icon', !base && ' h-9 w-9 p-2', className)}>
+  <div className={classnames('icon inline-block', !base && ' h-9 w-9 p-2', className)}>
     {href ? (
       <Link href={href}>
         <Icon name={name} />

@@ -35,10 +35,10 @@ const Navbar = ({ children }: NavBarProps) => {
           {/* <!-- Navbar --> */}
           <div className="navbar-fixed navbar h-16 w-full bg-base-100 px-4 text-sm sm:px-9">
             <div className="mx-2 flex-1 px-2">Navbar Title</div>
-            <div className="hidden flex-none lg:block">
+            <div className="hidden flex-none md:block">
               <NavMenu horizontal />
             </div>
-            <div className="flex-none lg:hidden">
+            <div className="flex-none md:hidden">
               {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
               <label htmlFor="my-drawer-3" className="btn-ghost btn-square btn">
                 <svg
@@ -57,7 +57,7 @@ const Navbar = ({ children }: NavBarProps) => {
         </div>
 
         {/* <!-- Sidebar here --> */}
-        <div className="drawer-side">
+        <div className="drawer-side md:hidden">
           {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label htmlFor="my-drawer-3" className="drawer-overlay" />
           <NavMenu />

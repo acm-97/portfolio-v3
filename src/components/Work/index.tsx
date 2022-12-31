@@ -33,7 +33,7 @@ const Work = () => {
                   <Icon href={project.website} />
                 </div>
               </div>
-              <div className="project-image-wrapper">
+              <div className="project-image-wrapper hover:z-10">
                 <figure className="project-image relative h-full cursor-pointer grayscale filter transition-all duration-300 hover:blur-none hover:grayscale-0 max-md:blur-sm">
                   <Link href={project.website}>
                     <img className="rounded-lg" src={project.image} alt={project.name} />
