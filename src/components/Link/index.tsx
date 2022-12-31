@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 type LinkProps = {
   href: string;
-  external: boolean;
+  external?: boolean;
   children: ReactNode;
   underline?: boolean;
   onClick?: () => void;

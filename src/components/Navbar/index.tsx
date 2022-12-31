@@ -1,9 +1,9 @@
-import { memo, ReactNode, useEffect, useRef } from 'react';
-import { ArrowSmallUpIcon } from '@heroicons/react/24/outline';
+import { memo, ReactNode, useRef } from 'react';
 
 import NavMenu from './NavMenu';
 
 import { scrollToTop } from '@/utils';
+import { Icon } from '@/components/icons';
 
 import '@/styles/navbar.css';
 
@@ -70,7 +70,7 @@ const Navbar = ({ children }: NavBarProps) => {
         id="fixed-button"
         className="btn-square btn fixed bottom-4 right-2 hidden"
       >
-        <ArrowSmallUpIcon />
+        <Icon name="ArrowUp" />
       </button>
     </>
   );

@@ -9,12 +9,13 @@ import {
   TwiterIcon,
   InstagramIcon,
   LanguageIcon,
+  ArrowUpIcon,
 } from '@/components/icons';
 import { Link } from '@/components';
 
 type IconProps = { name?: string };
 type IconRenderProps = {
-  name?: 'Folder' | 'GitHub' | 'LinkedIn' | 'Twiter' | 'Instagram' | 'Language' | 'External';
+  name?: 'Folder' | 'GitHub' | 'LinkedIn' | 'Twiter' | 'Instagram' | 'Language' | 'ArrowUp' | 'External';
   href?: string;
   className?: string;
   base?: boolean;
@@ -34,6 +35,8 @@ const Icon = ({ name }: IconProps) => {
       return <InstagramIcon />;
     case 'Language':
       return <LanguageIcon />;
+    case 'ArrowUp':
+      return <ArrowUpIcon />;
     default:
       return <ExternalIcon />;
   }

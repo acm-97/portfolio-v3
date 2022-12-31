@@ -6,4 +6,5 @@ export { default as LinkedInIcon } from './linkedin';
 export { default as TwiterIcon } from './twiter';
 export { default as InstagramIcon } from './instagram';
 export { default as LanguageIcon } from './language';
+export { default as ArrowUpIcon } from './arrowup';
 export { default as Icon } from './icon';
