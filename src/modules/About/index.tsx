@@ -2,7 +2,7 @@ import { Trans, useTranslation } from 'react-i18next';
 import { memo } from 'react';
 
 import { CRAI, DOFLEINI } from '@/constants';
-import { SectionHeader as Header, Link } from '@/components';
+import { ScrollReveal, SectionHeader as Header, Link } from '@/components';
 
 import '@/styles/about.css';
 
@@ -11,10 +11,10 @@ import '@/styles/about.css';
 const About = () => {
   const { t } = useTranslation('about');
   return (
-    <div className="section-hidden w-full">
-      <Header num={1} text={t('title')} />
-      <div className="grid-ab">
-        <div className="text-xl">
+    <div className="w-full">
+      <Header scrollReveal num={1} text={t('title')} />
+      <ScrollReveal component="ul" className="grid-ab" interval={300}>
+        <li className="text-xl">
           <p>{t('history.part1')}</p>
           <p className="relative">
             <Trans
@@ -34,8 +34,8 @@ const About = () => {
             <li>Angular</li>
             <li>Python</li>
           </ul>
-        </div>
-        <div>
+        </li>
+        <li>
           <div className="profile-img-container">
             <div className="profile-img-frame">
               <img className=" opacity-0" alt="profile.png" src="/profile.png" />
@@ -46,8 +46,8 @@ const About = () => {
               <div className="tag-occupation">{t('occupation')}</div>
             </div>
           </div>
-        </div>
-      </div>
+        </li>
+      </ScrollReveal>
     </div>
   );
 };

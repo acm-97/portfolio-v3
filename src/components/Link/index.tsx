@@ -1,10 +1,10 @@
 import { ReactNode, memo } from 'react';
 import classnames from 'classnames';
 
-type LinkProps = {
+export type LinkProps = {
   href: string;
   external?: boolean;
-  children: ReactNode;
+  children?: ReactNode;
   underline?: boolean;
   onClick?: () => void;
   className?: string;
@@ -21,7 +21,7 @@ const Link = ({
 }: LinkProps) =>
   !external ? (
     <a href={href} onClick={onClick} className={classnames(underline && 'underline', className)}>
-      {children}
+      {children && children}
     </a>
   ) : (
     <a
@@ -30,7 +30,7 @@ const Link = ({
       // rel="noopener noreferrer"
       className={classnames(underline && 'underline', className)}
     >
-      {children}
+      {children && children}
     </a>
   );
 

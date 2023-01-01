@@ -11,14 +11,14 @@ import {
   LanguageIcon,
   ArrowUpIcon,
 } from '@/components/icons';
-import { Link } from '@/components';
+import { Link, LinkProps } from '@/components';
 
 type IconProps = { name?: string };
 type IconRenderProps = {
   name?: 'Folder' | 'GitHub' | 'LinkedIn' | 'Twiter' | 'Instagram' | 'Language' | 'ArrowUp' | 'External';
-  href?: string;
   className?: string;
   base?: boolean;
+  linkProps?: LinkProps;
 };
 
 const Icon = ({ name }: IconProps) => {
@@ -42,10 +42,10 @@ const Icon = ({ name }: IconProps) => {
   }
 };
 
-const IconRender = ({ name, href, className = '', base = false }: IconRenderProps) => (
+const IconRender = ({ name, className = '', base = false, linkProps }: IconRenderProps) => (
   <div className={classnames('icon inline-block', !base && ' h-9 w-9 p-2', className)}>
-    {href ? (
-      <Link href={href}>
+    {linkProps?.href ? (
+      <Link {...linkProps}>
         <Icon name={name} />
       </Link>
     ) : (

@@ -4,7 +4,7 @@ import { memo, useState } from 'react';
 import ExperienceInfo from './ExperienceInfo';
 
 import { CRAI, DOFLEINI } from '@/constants';
-import { SectionHeader as Header } from '@/components';
+import { SectionHeader as Header, ScrollReveal } from '@/components';
 
 import '@/styles/experience.css';
 
@@ -17,9 +17,10 @@ const Experience = () => {
   const { t } = useTranslation('experience');
 
   return (
-    <div className="section-hidden w-full max-w-2xl">
-      <Header num={2} text={t('title')} />
-      <div className="grid-ex">
+    <div className=" w-full max-w-2xl">
+      <Header scrollReveal num={2} text={t('title')} />
+
+      <ScrollReveal component="div" className="grid-ex">
         <div className="tabs flex-col">
           {jobs.map((item) => (
             <button
@@ -63,7 +64,7 @@ const Experience = () => {
             <>{t('dofleini.description.3')}</>
           </>
         </ExperienceInfo>
-      </div>
+      </ScrollReveal>
     </div>
   );
 };
