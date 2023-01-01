@@ -38,9 +38,7 @@ const About = () => {
         <div>
           <div className="profile-img-container">
             <div className="profile-img-frame">
-              <div className="opacity-0">
-                <img alt="profile.png" src="/profile.png" />
-              </div>
+              <img className=" opacity-0" alt="profile.png" src="/profile.png" />
             </div>
             <div className="profile-img">
               <img alt="profile.png" src="/profile.png" />
