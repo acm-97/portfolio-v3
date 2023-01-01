@@ -3,7 +3,8 @@ import classNames from 'classnames';
 
 import { HideShowNav, scrollToHashSection, showSections } from './utils';
 
-import { Navbar, Home, About, Experience, Work } from '@/components';
+import { Home, About, Experience, Work } from '@/modules';
+import { Navbar } from '@/components';
 
 const App = () => {
   const sectionAbout = useRef<HTMLDivElement>(null);
