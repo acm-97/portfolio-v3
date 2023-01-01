@@ -3,20 +3,20 @@ import classNames from 'classnames';
 
 import { HideShowNav, scrollToHashSection, showSections } from './utils';
 
-import { Home, About, Experience, Work } from '@/modules';
+import { Home, About, Experience, MyBuilds } from '@/modules';
 import { Navbar } from '@/components';
 
 const App = () => {
   const sectionAbout = useRef<HTMLDivElement>(null);
   const sectionExperience = useRef<HTMLDivElement>(null);
-  const sectionWork = useRef<HTMLDivElement>(null);
+  const sectionMyBuilds = useRef<HTMLDivElement>(null);
   const sectionContact = useRef<HTMLDivElement>(null);
 
   const sections = [
     { key: 'home', component: <Home />, ref: null },
     { key: 'about', component: <About />, ref: sectionAbout },
     { key: 'experience', component: <Experience />, ref: sectionExperience },
-    { key: 'work', component: <Work />, ref: sectionWork },
+    { key: 'MyBuilds', component: <MyBuilds />, ref: sectionMyBuilds },
   ];
 
   useEffect(() => {
@@ -28,9 +28,9 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    scrollToHashSection(sectionAbout, sectionExperience, sectionWork, sectionContact);
+    scrollToHashSection(sectionAbout, sectionExperience, sectionMyBuilds, sectionContact);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [sectionAbout, sectionExperience, sectionWork, sectionContact, window.location.hash]);
+  }, [sectionAbout, sectionExperience, sectionMyBuilds, sectionContact, window.location.hash]);
 
   return (
     <div>
