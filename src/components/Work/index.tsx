@@ -30,14 +30,18 @@ const Work = () => {
                 </div>
                 <div>
                   <Icon name="GitHub" href={project.github} />
-                  <Icon href={project.website} />
+                  {project.website && <Icon href={project.website} />}
                 </div>
               </div>
               <div className="project-image-wrapper hover:z-10">
-                <figure className="project-image relative h-full cursor-pointer grayscale filter transition-all duration-300 hover:blur-none hover:grayscale-0 max-md:blur-sm">
-                  <Link href={project.website}>
+                <figure className="project-image relative h-full grayscale filter transition-all duration-300 hover:blur-none hover:grayscale-0 max-md:blur-sm">
+                  {project.website ? (
+                    <Link href={project.website}>
+                      <img className="rounded-lg" src={project.image} alt={project.name} />
+                    </Link>
+                  ) : (
                     <img className="rounded-lg" src={project.image} alt={project.name} />
-                  </Link>
+                  )}
                 </figure>
               </div>
             </li>

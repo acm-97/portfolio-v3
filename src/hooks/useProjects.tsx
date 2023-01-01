@@ -50,8 +50,8 @@ const useProjects = () => {
         />
       ),
       keyWords: ['Eslint', 'Prettier', 'NPM'],
-      github: 'https://github.com/acm-97/react-snake-game',
-      website: 'https://acm-97.github.io/react-snake-game/',
+      github: 'https://github.com/acm-97/eslint-prettier-config',
+      website: '',
       image: '/projects/eslintprettier.png',
     },
   ];
