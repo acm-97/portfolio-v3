@@ -3,7 +3,7 @@ import { memo, ReactNode, useRef, useEffect, useState } from 'react';
 import NavMenu from './NavMenu';
 
 import { scrollToTop } from '@/utils';
-import { Icon } from '@/components/icons';
+import { Icon, Link, SiteLogo } from '@/components';
 
 import '@/styles/navbar.css';
 
@@ -42,7 +42,11 @@ const Navbar = ({ children }: NavBarProps) => {
         <div className="drawer-content flex h-full w-full overflow-hidden">
           {/* <!-- Navbar --> */}
           <div className="navbar-fixed navbar h-16 w-full bg-base-100 px-4 text-sm sm:px-9">
-            <div className="mx-2 flex-1 px-2">Navbar Title</div>
+            <div className="mx-2 flex-1 px-2">
+              <Link href="/" className="logo rounded-lg px-2">
+                <SiteLogo />
+              </Link>
+            </div>
             <div className="hidden flex-none md:block">
               <NavMenu horizontal />
             </div>

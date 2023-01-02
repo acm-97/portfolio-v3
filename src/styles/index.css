@@ -13,6 +13,8 @@
   --primary-bg-light: hsl(220, 18%, 30%);
   --primary-bg-dark: hsl(220, 18%, 17%);
 
+  --bg-hover: hsl(220, 18%, 22%);
+
   --sec-bg: #134e4a;
 
   --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
@@ -35,8 +37,20 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.bg-hover {
+  background-color: var(--bg-hover) !important;
+}
+
 .primary-bg {
   background-color: var(--primary-bg) !important;
+}
+
+.primary-bg-light {
+  background-color: var(--primary-bg-light) !important;
+}
+
+.primary-bg-dark {
+  background-color: var(--primary-bg-dark) !important;
 }
 
 .sec-bg {

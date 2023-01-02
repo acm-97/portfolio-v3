@@ -4,5 +4,6 @@ export { default as Link } from './Link';
 export { Icon } from './icons';
 export { default as ScrollReveal } from './ScrollReveal';
 export { default as Button } from './Button';
+export { default as SiteLogo } from './Logo';
 
 export type { LinkProps } from './Link';

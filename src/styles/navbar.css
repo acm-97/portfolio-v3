@@ -1,3 +1,7 @@
+.navbar .logo:hover {
+  background-color: var(--bg-hover);
+}
+
 .navbar li {
   animation: fadeInDown 0.3s ease-in both;
 }
