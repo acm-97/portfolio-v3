@@ -1,10 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 
-// eslint-disable-next-line import/no-absolute-path
-import CV from '/public/alejandro_cv.pdf';
-
 import { Button, Link, ScrollReveal } from '@/components';
+import CV from '@/assets/alejandro_cv.pdf';
 
 // type ComponentProps = {};
 
