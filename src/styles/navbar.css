@@ -42,7 +42,7 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
-@keyframes fadeInDown {
+/* @keyframes fadeInDown {
   from {
     opacity: 0;
     transform: translate3d(0, -20%, 0);
@@ -51,4 +51,4 @@
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
-}
+} */

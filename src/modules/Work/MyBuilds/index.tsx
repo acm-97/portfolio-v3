@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
 import { useProjects } from '@/hooks';
-import { SectionHeader as Header, Icon, Link } from '@/components';
+import { SectionHeader as Header, Icon, Link, ScrollReveal } from '@/components';
 import '@/styles/work.css';
 
 // type WorkProps = {};
@@ -11,10 +11,10 @@ const Work = () => {
   return (
     <>
       <div className="flex w-full flex-col justify-start">
-        <Header className="section-hidden" num={2} text="Some Things I’ve Built" />
-        <ul className="w-full">
+        <Header scrollReveal num={2} text="Some Things I’ve Built" />
+        <ScrollReveal component="ul" className="w-full">
           {personalProjects.map((project) => (
-            <li key={project.name} className="grid-wo section-hidden">
+            <li key={project.name} className="grid-wo">
               <div className="project-content w-full">
                 <div className="project-header">
                   <p className="sec-color font--mono mb-1 text-sm">Featured Project</p>
@@ -29,14 +29,14 @@ const Work = () => {
                   ))}
                 </div>
                 <div>
-                  <Icon name="GitHub" href={project.github} />
-                  {project.website && <Icon href={project.website} />}
+                  <Icon name="GitHub" linkProps={{ external: true, href: project.github }} />
+                  {project.website && <Icon linkProps={{ external: true, href: project.website }} />}
                 </div>
               </div>
               <div className="project-image-wrapper hover:z-10">
                 <figure className="project-image relative h-full grayscale filter transition-all duration-300 hover:blur-none hover:grayscale-0 max-md:blur-sm">
                   {project.website ? (
-                    <Link href={project.website}>
+                    <Link href={project.website} external>
                       <img className="rounded-lg" src={project.image} alt={project.name} />
                     </Link>
                   ) : (
@@ -46,7 +46,7 @@ const Work = () => {
               </div>
             </li>
           ))}
-        </ul>
+        </ScrollReveal>
       </div>
     </>
   );

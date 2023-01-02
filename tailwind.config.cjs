@@ -18,6 +18,7 @@ module.exports = {
       //   h5: { fontSize: theme('fontSize.base') },
       // });
       addVariant('hocus', ['&:hover', '&:focus']);
+      addVariant('not-last', '&:not(:last-child)')
     }),
   ],
 };

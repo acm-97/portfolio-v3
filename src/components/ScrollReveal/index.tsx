@@ -59,39 +59,31 @@ const ScrollReveal = ({
         origin,
         interval,
       });
-  }, [children, component, delay, delayBetween, distance, easing, interval, origin]);
+  }, [children, component, delay, delayBetween, distance, easing, interval, origin, singleRef]);
 
   const singleProps = {
     ref: singleRef,
     style,
-    className: classnames(component ? `reveal-${component}` : 'reveal-section', className, children?.props?.className),
     // 'data-testid': component,
   };
 
-  if (!component) {
-    if (typeof children.type !== 'string') {
-      return React.createElement('div', { ...singleProps }, children);
-    }
-
-    return React.cloneElement(children, { ...singleProps });
-  }
-
   if (!Array.isArray(children)) {
     if (typeof children.type !== 'string') {
-      return React.createElement('div', { ...singleProps }, children);
+      return React.createElement(component || 'div', { ...singleProps }, children);
     }
 
-    return React.createElement(component, { ...singleProps }, children);
+    return React.cloneElement(children, {
+      ...singleProps,
+    });
   }
 
   return React.createElement(
-    component,
+    component || 'div',
     { style, className },
     children.map((item) => {
       const addToRefsProps = {
         key: uuidv4(),
         ref: addToRefs,
-        style: { ...style, ...item.props.style },
         // 'data-testid': item.type,
       };
 
@@ -99,7 +91,7 @@ const ScrollReveal = ({
         return React.createElement('div', { ...addToRefsProps }, item);
       }
 
-      return React.cloneElement(item, { ...addToRefsProps, className: classnames(`reveal`, item.props.className) });
+      return React.cloneElement(item, { ...addToRefsProps });
     }),
   );
 };
