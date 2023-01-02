@@ -10,7 +10,7 @@ const Credits = () => {
 
   return (
     <div className="w-full pb-7 text-center">
-      <h6>
+      <p className="text-xs">
         <Trans
           // @ts-ignore
           defaults={t('credits')}
@@ -24,7 +24,7 @@ const Credits = () => {
             </Link>,
           ]}
         />
-      </h6>
+      </p>
     </div>
   );
 };
