@@ -11,7 +11,7 @@ const Work = () => {
   return (
     <>
       <div className="flex w-full flex-col justify-start">
-        <Header scrollReveal num={2} text="Some Things I’ve Built" />
+        <Header scrollReveal num={3} text="Some Things I’ve Built" />
         <ScrollReveal component="ul" className="w-full">
           {personalProjects.map((project) => (
             <li key={project.name} className="grid-wo">

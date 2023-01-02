@@ -1,8 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
-import { memo, useCallback, useEffect, useMemo, useState } from 'react';
+import { memo, useMemo } from 'react';
 
-import { useGithubProjects, ProjectsProps } from '@/contexts';
-import { ScrollReveal, Icon, Link, Button } from '@/components';
+import { useGithubProjects } from '@/contexts';
+import { ScrollReveal, Icon, Link } from '@/components';
 
 // type NoteworthyProjectsProps = {};
 
