@@ -26,8 +26,8 @@ const Link = ({
   ) : (
     <a
       href={href}
-      // target="_blank"
-      // rel="noopener noreferrer"
+      target="_blank"
+      rel="noopener noreferrer"
       className={classnames(underline && 'underline', className)}
     >
       {children && children}

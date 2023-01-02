@@ -2,5 +2,12 @@
   "about": "About",
   "experience": "Experience",
   "work": "Work",
-  "contact": "Contact"
+  "contact": "Contact",
+  "contactSection": {
+    "title": "What’s Next?",
+    "started": "Get In Touch",
+    "message": "I am always willing to consider proposals for work, my inbox is always open. Whether you have a proposal, a question or just want to say hi, I’ll try my best to get back to you!",
+    "button": "Say Hello"
+  },
+  "credits": "Inspired in <0>{{inspired}}</0> and Built by <0>{{built}}</0>"
 }

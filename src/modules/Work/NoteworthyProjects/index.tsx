@@ -41,7 +41,7 @@ const NoteworthyProjects = () => {
                 <div className="project-inner">
                   <header>
                     <div className="flex w-full items-center justify-between ">
-                      <Icon name="Folder" className="sec-color h-14 w-14" />
+                      <Icon name="Folder" className="sec-color h-14 w-[3.1rem] pl-0" />
                       <div className="z-10  flex items-center">
                         <Icon
                           name="GitHub"

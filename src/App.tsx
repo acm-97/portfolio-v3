@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import { HideShowNav, scrollToHashSection, showSections } from './utils';
 
-import { Home, About, Experience, MyBuilds, NoteworthyProjects } from '@/modules';
+import { Home, About, Experience, MyBuilds, NoteworthyProjects, Contact, Credits } from '@/modules';
 import { ProjectsProvider } from '@/contexts';
 import { Navbar } from '@/components';
 
@@ -11,7 +11,6 @@ const App = () => {
   const sectionAbout = useRef<HTMLDivElement>(null);
   const sectionExperience = useRef<HTMLDivElement>(null);
   const sectionMyBuilds = useRef<HTMLDivElement>(null);
-  const sectionNoteworthyProjects = useRef<HTMLDivElement>(null);
   const sectionContact = useRef<HTMLDivElement>(null);
 
   const sections = [
@@ -19,7 +18,8 @@ const App = () => {
     { key: 'about', component: <About />, ref: sectionAbout },
     { key: 'experience', component: <Experience />, ref: sectionExperience },
     { key: 'work', component: <MyBuilds />, ref: sectionMyBuilds },
-    { key: 'moteworthyProjects', component: <NoteworthyProjects />, ref: sectionNoteworthyProjects },
+    { key: 'noteworthyProjects', component: <NoteworthyProjects />, ref: null },
+    { key: 'contact', component: <Contact />, ref: sectionContact },
   ];
 
   useEffect(() => {
@@ -33,14 +33,7 @@ const App = () => {
   useEffect(() => {
     scrollToHashSection(sectionAbout, sectionExperience, sectionMyBuilds, sectionContact);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [
-    sectionAbout,
-    sectionExperience,
-    sectionMyBuilds,
-    sectionNoteworthyProjects,
-    sectionContact,
-    window.location.hash,
-  ]);
+  }, [sectionAbout, sectionExperience, sectionMyBuilds, sectionContact, window.location.hash]);
 
   return (
     <ProjectsProvider>
@@ -58,6 +51,7 @@ const App = () => {
             {component}
           </section>
         ))}
+        <Credits />
       </Navbar>
     </ProjectsProvider>
   );

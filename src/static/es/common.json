@@ -2,5 +2,12 @@
   "about": "Sobre",
   "experience": "Experiencia",
   "work": "Trabajo",
-  "contact": "Contacto"
+  "contact": "Contacto",
+  "contactSection": {
+    "title": "¿Y ahora qué?",
+    "started": "Póngase en contacto",
+    "message": "Siempre estoy dispuesta a considerar propuestas de trabajo, mi bandeja de entrada está siempre abierta. Si tienes una propuesta, una pregunta o simplemente quieres saludarme, ¡haré todo lo posible por responderte!",
+    "button": "Di Hola"
+  },
+  "credits": "Inspirado en <0>{{inspired}}</0> y construido por <0>{{built}}</0>"
 }
