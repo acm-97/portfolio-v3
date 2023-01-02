@@ -1,12 +1,16 @@
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 
-import { Button, ScrollReveal } from '@/components';
+// eslint-disable-next-line import/no-absolute-path
+import CV from '/public/alejandro_cv.pdf';
+
+import { Button, Link, ScrollReveal } from '@/components';
 
 // type ComponentProps = {};
 
 const Home = () => {
   const { t } = useTranslation('home');
+
   return (
     <ScrollReveal
       component="div"
@@ -22,7 +26,11 @@ const Home = () => {
         {t('occupation.part1')} <span className="sec-color">UI</span> {t('occupation.part2')}.
       </h1>
       <p className="primary-color-dark mt-5 max-w-xl text-xl">{t('description')}</p>
-      <Button className="mt-12">{t('downloadResume')}</Button>
+      <Button className="mt-12">
+        <Link href={CV} download="alejandro_cv.pdf">
+          {t('downloadResume')}
+        </Link>
+      </Button>
     </ScrollReveal>
   );
 };

@@ -8,6 +8,7 @@ export type LinkProps = {
   underline?: boolean;
   onClick?: () => void;
   className?: string;
+  download?: string;
 };
 
 const Link = ({
@@ -18,9 +19,10 @@ const Link = ({
   onClick = () => {},
   className = '',
   external = true,
+  download,
 }: LinkProps) =>
   !external ? (
-    <a href={href} onClick={onClick} className={classnames(underline && 'underline', className)}>
+    <a href={href} onClick={onClick} download={download} className={classnames(underline && 'underline', className)}>
       {children && children}
     </a>
   ) : (
@@ -28,6 +30,7 @@ const Link = ({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      download={download}
       className={classnames(underline && 'underline', className)}
     >
       {children && children}
