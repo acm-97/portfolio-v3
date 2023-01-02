@@ -1,23 +1,26 @@
+import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 
 import { useProjects } from '@/hooks';
 import { SectionHeader as Header, Icon, Link, ScrollReveal } from '@/components';
+
 import '@/styles/work.css';
 
 // type WorkProps = {};
 
 const Work = () => {
   const { personalProjects } = useProjects();
+  const { t } = useTranslation('work');
   return (
     <>
       <div className="flex w-full flex-col justify-start">
-        <Header scrollReveal num={3} text="Some Things I’ve Built" />
+        <Header scrollReveal num={3} text={t('myBuilds.title')} />
         <ScrollReveal component="ul" className="w-full">
           {personalProjects.map((project) => (
             <li key={project.name} className="grid-wo">
               <div className="project-content w-full">
                 <div className="project-header">
-                  <p className="sec-color font--mono mb-1 text-sm">Featured Project</p>
+                  <p className="sec-color font--mono mb-1 text-sm">{t('myBuilds.featured')}</p>
                   <p className="text-2xl">{project.name}</p>
                 </div>
                 <div className="project-description">{project.description}</div>

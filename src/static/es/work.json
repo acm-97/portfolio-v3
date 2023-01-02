@@ -1,5 +1,7 @@
 {
   "myBuilds": {
+    "title": "Cosas que he construido",
+    "featured": "Proyecto destacado",
     "acmfolio": {
       "description": "Segunda iteración de mi sitio web personal. Está pensado para parecerse a un terminal linux pero con un poco más de estilo y tiene algunas de las funciones que encontrarás en un terminal estándar."
     },
@@ -8,6 +10,28 @@
     },
     "eslintprettier": {
       "description": "Disponible en los repositorios<0>{{npm}}</0>. Hecho con las reglas de eslint y prettier que uso en mis proyectos. Por supuesto siempre puedes sobreescribirlas con tus propias reglas, si asi lo deseas."
+    }
+  },
+  "otherProjects": {
+    "title": "Otros Proyectos Destacados",
+    "archive": "ver todos los archivos",
+    "cuor-ng": {
+      "description": "Se trata de un Sistema de Identificación de Organizaciones, una de las herramientas de Sceiba, para mejorar el control de calidad y el seguimiento de las publicaciones científicas cubanas a nivel nacional e institucional."
+    },
+    "JavaScript-Challenges": {
+      "description": "Una mezcla de retos javascript para practicar y mejorar la lógica de programación."
+    },
+    "people-ng": {
+      "description": "Gestiona los perfiles de los investigadores científicos, identificando a cada uno de ellos de forma única y facilitando la desambiguación de perfiles."
+    },
+    "portfolio-v1": {
+      "description": "Primera versión de mi cartera personal"
+    },
+    "sceiba-ng": {
+      "description": "Espacio de colaboración e interrelación entre instituciones, investigadores, docentes, editores, bibliotecarios y otros profesionales de Cuba y el resto del mundo."
+    },
+    "spi": {
+      "description": "SPI es una serie de scripts en python para recopilar datos de personas en ORCID y en universidades cubanas"
     }
   }
 }

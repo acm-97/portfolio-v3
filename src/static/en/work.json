@@ -1,5 +1,7 @@
 {
   "myBuilds": {
+    "title": "Some Things I’ve Built",
+    "featured": "Featured Project",
     "acmfolio": {
       "description": "Second iteration of my personal website. It's meant to look like a linux terminal but with a bit more styling and has some of the functions you'll find in a standard terminal."
     },
@@ -9,5 +11,9 @@
     "eslintprettier": {
       "description": "Available in <0>{{npm}}</0> repositories. Made with the eslint and prettier rules I use in my projects. Of course you can always overwrite them with your own rules, if you wish."
     }
+  },
+  "otherProjects": {
+    "title": "Other Noteworthy Projects",
+    "archive": "view the entire archive"
   }
 }
