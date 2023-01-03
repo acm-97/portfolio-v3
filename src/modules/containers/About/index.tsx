@@ -36,7 +36,7 @@ const About = () => {
           </ul>
         </li>
         <li>
-          <div className="profile-img-container">
+          <div className="profile-img-container grayscale hover:grayscale-0">
             <div className="profile-img-frame">
               <img className=" opacity-0" alt="profile.png" src="/profile.png" />
             </div>
