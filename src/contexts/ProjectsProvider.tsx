@@ -31,23 +31,26 @@ type ProjectsProviderProps = {
   children: ReactNode;
 };
 
-const headers = {
-  'Content-Type': 'application/json',
-  Authorization: GIT_TOKEN,
-};
-
 const ProjectsProvider = ({ children }: ProjectsProviderProps) => {
   const [projects, setProjects] = useState<ProjectsProps[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+
+  const headers = useMemo(
+    () => ({
+      'Content-Type': 'application/json',
+      Authorization: GIT_TOKEN,
+    }),
+    [],
+  );
 
   useEffect(() => {
     const controller = new AbortController();
     const { signal } = controller;
     const fetchProjects = () => {
-      fetch('https://api.github.com/users/acm-97/repos', { signal })
+      fetch('https://api.github.com/users/acm-97/repos', { headers, signal })
         .then((res) => res.json())
         .then(async (repos) => {
-          setProjects(await gitProjects(repos));
+          setProjects(await gitProjects(repos, headers));
           setLoading(false);
         })
         .catch((err) => {
@@ -61,7 +64,7 @@ const ProjectsProvider = ({ children }: ProjectsProviderProps) => {
     return () => {
       controller.abort();
     };
-  }, []);
+  }, [headers]);
 
   const providerValue = useMemo(
     () => ({

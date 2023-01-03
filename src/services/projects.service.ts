@@ -1,15 +1,9 @@
 import { ProjectsProps } from '@/contexts';
-import { GIT_TOKEN } from '@/constants';
-
-const headers = {
-  'Content-Type': 'application/json',
-  Authorization: GIT_TOKEN,
-};
 
 /**
  * * maping th repos array and adding topics for each project
  */
-export async function gitProjects(repos: ProjectsProps[]) {
+export async function gitProjects(repos: ProjectsProps[], headers?: any) {
   const controller = new AbortController();
   const { signal } = controller;
   return await Promise.all(
