@@ -2,6 +2,8 @@
   "extends": ["./node_modules/@acm-97/eslint-prettier-config/typescript.js"],
   "rules": {
     "import/no-unresolved": "off",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "jsx-a11y/control-has-associated-label": "off",
+    "react/jsx-props-no-spreading": "off"
   }
 }
