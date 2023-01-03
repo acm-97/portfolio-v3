@@ -1,4 +1,5 @@
-import { memo, ReactNode, useRef, useEffect, useState } from 'react';
+import { Outlet, useLoaderData } from 'react-router-dom';
+import { memo, useRef, useEffect, useState, ReactNode } from 'react';
 
 import NavMenu from './NavMenu';
 

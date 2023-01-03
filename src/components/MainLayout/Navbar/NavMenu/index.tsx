@@ -1,8 +1,9 @@
+import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { memo, useState } from 'react';
+import { memo } from 'react';
 import classnames from 'classnames';
 
-import { routes } from '@/constants';
+import { routesHashes } from '@/constants';
 import { Icon, Link } from '@/components';
 
 type NavMenuProps = {
@@ -14,14 +15,13 @@ type NavMenuProps = {
 
 const NavMenu = ({ className = '', horizontal = false, drawerInput, handleDrawer }: NavMenuProps) => {
   const { t, i18n } = useTranslation('common');
-  const [active, setActive] = useState(window.location.pathname);
+  let { hash } = useLocation();
 
   const menuStyles = horizontal
     ? 'menu-horizontal'
     : 'w-80 bg-base-100 p-4 flex-col justify-center items-center text-3xl';
 
-  const onClick = (path: string) => {
-    setActive(path);
+  const onClick = () => {
     if (drawerInput?.checked) drawerInput.checked = false;
     handleDrawer && handleDrawer(false);
   };
@@ -33,19 +33,19 @@ const NavMenu = ({ className = '', horizontal = false, drawerInput, handleDrawer
 
   return (
     <ul className={classnames(className, menuStyles, 'menu')}>
-      {routes.map((route, i) => (
-        <li key={route.name} className="p-3.5">
+      {routesHashes.map(({ name, hash: _hash }, i) => (
+        <li key={name} className="p-3.5">
           <Link
             external={false}
             className={classnames(
               !horizontal && 'flex flex-col',
-              active === route.path && 'sec-color',
+              hash === _hash && 'sec-color',
               '  gap-1  p-0 hover:bg-transparent focus:bg-transparent',
             )}
-            href={route.path}
-            onClick={() => onClick(route.path)}
+            href={_hash}
+            onClick={onClick}
           >
-            <span className="sec-color p-0">{`0${i + 1}.`}</span> {t(route.name.toLowerCase())}
+            <span className="sec-color p-0">{`0${i + 1}.`}</span> {t(name.toLowerCase())}
           </Link>
         </li>
       ))}
