@@ -1,8 +1,9 @@
 import { ProjectsProps } from '@/contexts';
+import { GIT_TOKEN } from '@/constants';
 
 const headers = {
   'Content-Type': 'application/json',
-  Authorization: 'Bearer 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',
+  Authorization: GIT_TOKEN,
 };
 
 /**

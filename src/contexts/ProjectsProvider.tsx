@@ -1,6 +1,7 @@
 import { createContext, ReactNode, useState, useContext, useEffect, useMemo } from 'react';
 
 import { gitProjects } from '@/services';
+import { GIT_TOKEN } from '@/constants';
 
 export type ProjectsProps = {
   id: string;
@@ -32,7 +33,7 @@ type ProjectsProviderProps = {
 
 const headers = {
   'Content-Type': 'application/json',
-  Authorization: 'Bearer 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',
+  Authorization: GIT_TOKEN,
 };
 
 const ProjectsProvider = ({ children }: ProjectsProviderProps) => {
