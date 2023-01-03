@@ -28,7 +28,7 @@ const NoteworthyProjects = () => {
       <ScrollReveal className="text-center">
         <h3 className="mb-4">{t('otherProjects.title')}</h3>
         <div>
-          <LinkRouter reloadDocument to="/archive" className="font--mono text-sm underline">
+          <LinkRouter to="/archive" className="font--mono text-sm underline">
             {t('otherProjects.archive')}
           </LinkRouter>
         </div>
