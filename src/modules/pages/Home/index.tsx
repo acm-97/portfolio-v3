@@ -2,8 +2,9 @@ import { memo, useEffect, useRef } from 'react';
 import classNames from 'classnames';
 
 import { HideShowNav, scrollToHashSection, showSections } from '@/utils';
-import { Home, About, Experience, MyBuilds, NoteworthyProjects, Contact, Credits } from '@/modules/containers';
-import { ProjectsProvider } from '@/contexts';
+import { Home, About, Experience, MyBuilds, NoteworthyProjects, Contact } from '@/modules/containers';
+
+import '@/styles/home.css';
 
 const HomePage = () => {
   const sectionAbout = useRef<HTMLDivElement>(null);
@@ -34,7 +35,7 @@ const HomePage = () => {
   }, [sectionAbout, sectionExperience, sectionMyBuilds, sectionContact, window.location.hash]);
 
   return (
-    <>
+    <main className="main-home">
       {sections.map(({ key, component, ref }, i) => (
         <section
           key={`${key}-section`}
@@ -48,7 +49,7 @@ const HomePage = () => {
           {component}
         </section>
       ))}
-    </>
+    </main>
   );
 };
 

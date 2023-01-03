@@ -1,5 +1,6 @@
 import { HomePage } from '@/modules';
 import { Layout } from '@/components';
+import Archive from '@/modules/pages/Archive';
 
 export type routesHashesProps = {
   name: string;
@@ -8,10 +9,10 @@ export type routesHashesProps = {
 
 export const routesHashes = [
   // { name: 'Home', path: '/' },
-  { name: 'About', hash: '/#about' },
-  { name: 'Experience', hash: '/#experience' },
-  { name: 'Work', hash: '/#work' },
-  { name: 'Contact', hash: '/#contact' },
+  { name: 'About', hash: '#about' },
+  { name: 'Experience', hash: '#experience' },
+  { name: 'Work', hash: '#work' },
+  { name: 'Contact', hash: '#contact' },
 ];
 
 export const routes = [
@@ -25,7 +26,7 @@ export const routes = [
       },
       {
         path: 'archive',
-        element: <div>Hello world!</div>,
+        element: <Archive />,
       },
     ],
   },

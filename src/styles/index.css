@@ -1,5 +1,4 @@
 @import './tailwind.css';
-@import './home.css';
 
 :root {
   --primary-color: #ccd6f6;
@@ -93,11 +92,6 @@ body {
   width: 100%;
 }
 
-main {
-  padding: 0 9.6875rem;
-  width: 100%;
-}
-
 a {
   color: var(--sec-color);
 }
@@ -161,7 +155,6 @@ h6 {
 h3 a,
 h4 a,
 .navbar li a {
-  color: var(--primary-color) !important;
   text-decoration: none;
 }
 
@@ -250,10 +243,6 @@ h4 a,
 } */
 
 @media (max-width: 1080px) {
-  main {
-    padding: 0 6rem;
-  }
-
   .line-header::after {
     width: 12.5rem;
   }
@@ -268,10 +257,6 @@ h4 a,
 }
 
 @media (max-width: 768px) {
-  main {
-    padding: 0 3.125rem;
-  }
-
   .line-header::after {
     width: 100%;
   }
@@ -376,10 +361,6 @@ h4 a,
 }
 
 @media (max-width: 480px) {
-  main {
-    padding: 0px 1.5625rem;
-  }
-
   .line-header::after {
     margin-left: 0.625rem;
   }

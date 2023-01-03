@@ -1,9 +1,10 @@
 import { v4 as uuidv4 } from 'uuid';
+import { Link as LinkRouter } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { memo, useMemo } from 'react';
 
 import { useGithubProjects } from '@/contexts';
 import { ScrollReveal, Icon, Link } from '@/components';
-import { useTranslation } from 'react-i18next';
 
 // type NoteworthyProjectsProps = {};
 
@@ -27,9 +28,9 @@ const NoteworthyProjects = () => {
       <ScrollReveal className="text-center">
         <h3 className="mb-4">{t('otherProjects.title')}</h3>
         <div>
-          <Link href="#" underline className="font--mono text-sm">
+          <LinkRouter to="/archive" className="font--mono text-sm underline">
             {t('otherProjects.archive')}
-          </Link>
+          </LinkRouter>
         </div>
       </ScrollReveal>
 

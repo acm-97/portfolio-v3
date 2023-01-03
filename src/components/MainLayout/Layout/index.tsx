@@ -17,10 +17,8 @@ const Layout = () => {
 
   return (
     <Navbar>
-      <>
-        <Outlet />
-        <Credits />
-      </>
+      <Outlet />
+      <Credits />
     </Navbar>
   );
 };

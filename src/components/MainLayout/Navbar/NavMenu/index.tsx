@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link as LinkRouter } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import classnames from 'classnames';
@@ -15,7 +15,7 @@ type NavMenuProps = {
 
 const NavMenu = ({ className = '', horizontal = false, drawerInput, handleDrawer }: NavMenuProps) => {
   const { t, i18n } = useTranslation('common');
-  let { hash } = useLocation();
+  let { hash, pathname } = useLocation();
 
   const menuStyles = horizontal
     ? 'menu-horizontal'
@@ -35,18 +35,18 @@ const NavMenu = ({ className = '', horizontal = false, drawerInput, handleDrawer
     <ul className={classnames(className, menuStyles, 'menu')}>
       {routesHashes.map(({ name, hash: _hash }, i) => (
         <li key={name} className="p-3.5">
-          <Link
-            external={false}
+          <LinkRouter
+            reloadDocument={pathname === '/'}
             className={classnames(
               !horizontal && 'flex flex-col',
               hash === _hash && 'sec-color',
               '  gap-1  p-0 hover:bg-transparent focus:bg-transparent',
             )}
-            href={_hash}
+            to={`/${_hash}`}
             onClick={onClick}
           >
             <span className="sec-color p-0">{`0${i + 1}.`}</span> {t(name.toLowerCase())}
-          </Link>
+          </LinkRouter>
         </li>
       ))}
       <li className="p-3">

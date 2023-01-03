@@ -1,5 +1,6 @@
-import { gitProjects } from '@/services';
 import { createContext, ReactNode, useState, useContext, useEffect, useMemo } from 'react';
+
+import { gitProjects } from '@/services';
 
 export type ProjectsProps = {
   id: string;
@@ -8,12 +9,9 @@ export type ProjectsProps = {
   github: string;
   description: string;
   website: string;
-  topics?: string[];
-  owner: {
-    userName: string;
-    id?: string;
-    avatar_url?: string;
-  };
+  topics?: string[] | [];
+  createdAt: Date;
+  madeAt: string;
 };
 
 interface ProjectsContextProps {
@@ -30,6 +28,11 @@ export const ProjectsContext = createContext<ProjectsContextProps>({
 
 type ProjectsProviderProps = {
   children: ReactNode;
+};
+
+const headers = {
+  'Content-Type': 'application/json',
+  Authorization: 'Bearer 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',
 };
 
 const ProjectsProvider = ({ children }: ProjectsProviderProps) => {

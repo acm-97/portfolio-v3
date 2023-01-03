@@ -1,4 +1,5 @@
 export { routes, routesHashes } from './navigation';
+export { privateProjects } from './privateProjects';
 export type { routesHashesProps } from './navigation';
 
 export const CRAI = import.meta.env.VITE_CRAI;

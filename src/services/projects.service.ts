@@ -1,5 +1,10 @@
 import { ProjectsProps } from '@/contexts';
 
+const headers = {
+  'Content-Type': 'application/json',
+  Authorization: 'Bearer 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',
+};
+
 /**
  * * maping th repos array and adding topics for each project
  */
@@ -9,7 +14,7 @@ export async function gitProjects(repos: ProjectsProps[]) {
   return await Promise.all(
     repos.map(async (item: any) => {
       // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-      const topics = await fetch(`https://api.github.com/repos/acm-97/${item.name}/topics`, { signal })
+      const topics = await fetch(`https://api.github.com/repos/acm-97/${item.name}/topics`, { headers, signal })
         .then((res) => res.json())
         .then((_topics) => _topics.names);
 
@@ -21,11 +26,8 @@ export async function gitProjects(repos: ProjectsProps[]) {
         website: item.homepage,
         description: item.description,
         topics,
-        owner: {
-          id: item.owner.id,
-          userName: item.owner.userName,
-          avatar_url: item.owner.avatar_url,
-        },
+        createdAt: new Date(item.fork ? '1/9/2020' : item.created_at),
+        madeAt: item.fork ? 'CRAI' : '',
       };
     }),
   );

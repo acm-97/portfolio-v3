@@ -28,3 +28,28 @@
     transform: translate3d(0, 0, 0);
   }
 } */
+
+main.main-home {
+  padding: 0 9.6875rem;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100vh;
+}
+
+@media (max-width: 1080px) {
+  main.main-home {
+    padding: 0 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main.main-home {
+    padding: 0 3.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main.main-home {
+    padding: 0px 1.5625rem;
+  }
+}
