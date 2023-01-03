@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import scrollReveal from 'scrollreveal';
-import React, { useRef, useEffect, CSSProperties, ReactElement, ReactNode, Fragment } from 'react';
+import React, { useRef, useEffect, CSSProperties, useMemo } from 'react';
 import classnames from 'classnames';
 
 interface ScrollRevealProps {
@@ -14,6 +14,7 @@ interface ScrollRevealProps {
   easing?: string;
   distance?: string;
   interval?: number;
+  viewFactor?: number;
 }
 
 const ScrollReveal = ({
@@ -24,9 +25,10 @@ const ScrollReveal = ({
   delayBetween = 500,
   className = '',
   origin = 'bottom',
-  easing = 'cubic-bezier(0.5, 0, 0, 1)',
+  easing = 'cubic-bezier(0.645, 0.045, 0.355, 1)',
   interval = 0,
-  distance = '50px',
+  distance = '20px',
+  viewFactor = 0.25,
 }: ScrollRevealProps) => {
   const singleRef = useRef<HTMLDivElement>(null);
   const revealsRef = useRef<NodeListOf<Element>[]>([]);
@@ -38,28 +40,31 @@ const ScrollReveal = ({
     }
   };
 
+  const config = useMemo(
+    () => ({
+      origin,
+      distance,
+      duration: 500,
+      delay,
+      rotate: { x: 0, y: 0, z: 0 },
+      opacity: 0,
+      scale: 1,
+      easing,
+      mobile: true,
+      reset: false,
+      useDelay: 'always',
+      viewFactor,
+      viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
+    }),
+    [delay, distance, easing, origin, viewFactor],
+  );
+
   useEffect(() => {
     if (Array.isArray(children)) {
       // @ts-ignore
-      scrollReveal().reveal(revealsRef?.current, {
-        reset: false,
-        // delay: i === 0 ? delay : delay + i * delayBetween,
-        delay,
-        easing,
-        distance,
-        origin,
-        interval,
-      });
-    } else if (singleRef.current)
-      scrollReveal().reveal(singleRef.current, {
-        reset: false,
-        delay,
-        easing,
-        distance,
-        origin,
-        interval,
-      });
-  }, [children, component, delay, delayBetween, distance, easing, interval, origin, singleRef]);
+      scrollReveal().reveal(revealsRef?.current, config);
+    } else if (singleRef.current) scrollReveal().reveal(singleRef.current, config);
+  }, [children, component, config, delay, delayBetween, distance, easing, interval, origin, singleRef]);
 
   const singleProps = {
     ref: singleRef,
