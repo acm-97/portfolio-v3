@@ -27,7 +27,7 @@ const ScrollReveal = ({
   origin = 'bottom',
   easing = 'cubic-bezier(0.645, 0.045, 0.355, 1)',
   interval = 0,
-  distance = '20px',
+  distance = '50px',
   viewFactor = 0.25,
 }: ScrollRevealProps) => {
   const singleRef = useRef<HTMLDivElement>(null);
@@ -46,6 +46,7 @@ const ScrollReveal = ({
       distance,
       duration: 500,
       delay,
+      interval,
       rotate: { x: 0, y: 0, z: 0 },
       opacity: 0,
       scale: 1,
@@ -56,7 +57,7 @@ const ScrollReveal = ({
       viewFactor,
       viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
     }),
-    [delay, distance, easing, origin, viewFactor],
+    [delay, distance, easing, interval, origin, viewFactor],
   );
 
   useEffect(() => {
