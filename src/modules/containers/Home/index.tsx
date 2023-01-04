@@ -14,6 +14,7 @@ const Home = () => {
       component="div"
       className="flex w-full flex-col items-start text-start"
       origin="bottom"
+      delay={600}
       interval={200}
       easing="ease-in"
     >

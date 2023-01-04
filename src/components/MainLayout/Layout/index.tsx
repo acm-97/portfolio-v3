@@ -5,7 +5,8 @@ import Navbar from '../Navbar';
 
 import { Credits } from '@/modules/containers';
 import { useGithubProjects } from '@/contexts';
-import { LoaderIcon } from '@/components/icons';
+import { Icon, LoaderIcon } from '@/components/Icons';
+import { Button, Socials } from '@/components';
 
 // type LayoutProps = {};
 
@@ -31,7 +32,13 @@ const Layout = () => {
   return (
     <Navbar>
       <Outlet />
+
+      {/* Footer */}
       <Credits />
+      <Socials />
+      {/* <Button onClick={onScrollToTop} className="btn-square btn fixed bottom-4 right-2 hidden">
+        <Icon name="ArrowUp" />
+      </Button> */}
     </Navbar>
   );
 };

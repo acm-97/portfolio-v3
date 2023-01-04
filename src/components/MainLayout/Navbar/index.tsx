@@ -76,15 +76,6 @@ const Navbar = ({ children }: NavBarProps) => {
           <NavMenu drawerInput={drawerInput} handleDrawer={handleChecked} />
         </div>
       </div>
-
-      <button
-        type="button"
-        onClick={onScrollToTop}
-        id="fixed-button"
-        className="btn-square btn fixed bottom-4 right-2 hidden"
-      >
-        <Icon name="ArrowUp" />
-      </button>
     </>
   );
 };
