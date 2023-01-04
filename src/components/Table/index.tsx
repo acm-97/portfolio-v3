@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { memo } from 'react';
 import classnames from 'classnames';
+
 import ScrollReveal from '../ScrollReveal';
 
 export type ColumnsProps = {
@@ -31,30 +32,32 @@ const Table = ({
   tableHeaderProps,
   scrollReveal = false,
 }: TableProps) => (
-  <ScrollReveal delay={!scrollReveal ? 0 : 500} className={classnames('overflow-x-auto', containerClass)}>
-    <table className={classnames('table w-full', tableClass)}>
-      <thead>
-        <tr>
-          {columns.map((col) => (
-            <th key={uuidv4()} {...col.headerCellProps}>
-              {col.headerName}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <ScrollReveal component="tbody" delay={!scrollReveal ? 0 : 500}>
-        {rows.map((row) => (
-          <tr key={uuidv4()} {...tableRowBodyProps} onClick={() => tableRowBodyProps?.onClick(row)}>
+  <div className={classnames('overflow-x-auto', containerClass)}>
+    <ScrollReveal delay={!scrollReveal ? 0 : 500}>
+      <table className={classnames('table w-full', tableClass)}>
+        <thead>
+          <tr>
             {columns.map((col) => (
-              <td key={uuidv4()} {...col.cellProps}>
-                {typeof col.accessor === 'function' ? col.accessor(row) : row[col.accessor]}
-              </td>
+              <th key={uuidv4()} {...col.headerCellProps}>
+                {col.headerName}
+              </th>
             ))}
           </tr>
-        ))}
-      </ScrollReveal>
-    </table>
-  </ScrollReveal>
+        </thead>
+        <ScrollReveal component="tbody" delay={!scrollReveal ? 0 : 500}>
+          {rows.map((row) => (
+            <tr key={uuidv4()} {...tableRowBodyProps} onClick={() => tableRowBodyProps?.onClick(row)}>
+              {columns.map((col) => (
+                <td key={uuidv4()} {...col.cellProps}>
+                  {typeof col.accessor === 'function' ? col.accessor(row) : row[col.accessor]}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </ScrollReveal>
+      </table>
+    </ScrollReveal>
+  </div>
 );
 
 export default memo(Table);

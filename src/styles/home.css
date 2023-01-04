@@ -32,7 +32,7 @@
 main.main-home {
   padding: 0 9.6875rem;
   width: 100%;
-  max-width: 1600px;
+  /* max-width: 1600px; */
   min-height: 100vh;
 }
 
