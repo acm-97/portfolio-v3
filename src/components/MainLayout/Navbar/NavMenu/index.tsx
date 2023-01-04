@@ -4,7 +4,7 @@ import { memo } from 'react';
 import classnames from 'classnames';
 
 import { routesHashes } from '@/constants';
-import { Icon, Link } from '@/components';
+import { Icon, Link, ScrollReveal } from '@/components';
 
 type NavMenuProps = {
   horizontal?: boolean;
@@ -35,18 +35,18 @@ const NavMenu = ({ className = '', horizontal = false, drawerInput, handleDrawer
     <ul className={classnames(className, menuStyles, 'menu')}>
       {routesHashes.map(({ name, hash: _hash }, i) => (
         <li key={name} className="p-3.5">
-          <LinkRouter
-            reloadDocument={pathname === '/'}
+          <a
+            // reloadDocument={pathname === '/'}
             className={classnames(
               !horizontal && 'flex flex-col',
               hash === _hash && 'sec-color',
               '  gap-1  p-0 hover:bg-transparent focus:bg-transparent',
             )}
-            to={`/${_hash}`}
+            href={`/${_hash}`}
             onClick={onClick}
           >
             <span className="sec-color p-0">{`0${i + 1}.`}</span> {t(name.toLowerCase())}
-          </LinkRouter>
+          </a>
         </li>
       ))}
       <li className="p-3">

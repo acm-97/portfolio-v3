@@ -1,14 +1,14 @@
 import { memo } from 'react';
 
 import { GITHUB, LINKEDIN, INSTAGRAM, TWITER, GMAIL } from '@/constants';
-import { Icon, Link } from '@/components';
+import { Icon, Link, ScrollReveal } from '@/components';
 
 // type SocialsProps = {};
 
 const Socials = () => (
-  <>
+  <ScrollReveal delay={400}>
     <div className="fixed bottom-0 left-10 right-auto z-10 w-10 max-[1080px]:left-5 max-md:hidden">
-      <ul className="socials m-0 flex list-none flex-col items-center p-0">
+      <div className="socials m-0 flex list-none flex-col items-center p-0">
         <li>
           <Icon name="GitHub" linkProps={{ href: GITHUB }} />
         </li>
@@ -21,7 +21,7 @@ const Socials = () => (
         <li className="mb-3">
           <Icon name="LinkedIn" linkProps={{ href: LINKEDIN }} />
         </li>
-      </ul>
+      </div>
     </div>
     <div className="fixed bottom-0 right-10 left-auto z-10 w-10 max-[1080px]:right-5 max-md:hidden">
       <div className="socials relative flex flex-col items-center">
@@ -34,7 +34,7 @@ const Socials = () => (
         </Link>
       </div>
     </div>
-  </>
+  </ScrollReveal>
 );
 
 export default memo(Socials);
