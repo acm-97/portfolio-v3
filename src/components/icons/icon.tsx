@@ -10,7 +10,7 @@ import {
   InstagramIcon,
   LanguageIcon,
   ArrowUpIcon,
-} from '@/components/icons';
+} from '@/components/Icons';
 import { Link, LinkProps } from '@/components';
 
 type IconProps = { name?: string };
