@@ -1,18 +1,31 @@
-import { Outlet } from 'react-router-dom';
-import { memo } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
+import { memo, useEffect, useState } from 'react';
 
 import Navbar from '../Navbar';
 
 import { Credits } from '@/modules/containers';
 import { useGithubProjects } from '@/contexts';
+import { LoaderIcon } from '@/components/icons';
 
 // type LayoutProps = {};
 
 const Layout = () => {
+  let { pathname } = useLocation();
   const { isLoading } = useGithubProjects();
+  const [isMounted, setIsMounted] = useState(false);
 
-  if (isLoading) {
-    return <div>....is loading</div>;
+  useEffect(() => {
+    setIsMounted(false);
+    const timeout = setTimeout(() => setIsMounted(true), 2500);
+    return () => clearTimeout(timeout);
+  }, [pathname]);
+
+  if (isLoading || !isMounted) {
+    return (
+      <div className="flex min-h-[100vh] w-full items-center justify-center">
+        <LoaderIcon width={300} />
+      </div>
+    );
   }
 
   return (
