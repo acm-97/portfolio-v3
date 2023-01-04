@@ -1,7 +1,7 @@
 // eslint-disable
 // @ts-nocheck
 import React, { useEffect } from 'react';
-import { ReactComponent as Svg } from '@/assets/icons/logo-loader.svg';
+import { ReactComponent as Svg } from '/public/logo-loader.svg';
 
 const IconLoader = (props: any) => {
   useEffect(() => {
