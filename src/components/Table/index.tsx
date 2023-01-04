@@ -31,9 +31,9 @@ const Table = ({
   tableHeaderProps,
   scrollReveal = false,
 }: TableProps) => (
-  <div className={classnames('overflow-x-auto', containerClass)}>
+  <ScrollReveal delay={!scrollReveal ? 0 : 500} className={classnames('overflow-x-auto', containerClass)}>
     <table className={classnames('table w-full', tableClass)}>
-      <ScrollReveal component="thead" delay={!scrollReveal ? 0 : 500}>
+      <thead>
         <tr>
           {columns.map((col) => (
             <th key={uuidv4()} {...col.headerCellProps}>
@@ -41,7 +41,7 @@ const Table = ({
             </th>
           ))}
         </tr>
-      </ScrollReveal>
+      </thead>
       <ScrollReveal component="tbody" delay={!scrollReveal ? 0 : 500}>
         {rows.map((row) => (
           <tr key={uuidv4()} {...tableRowBodyProps} onClick={() => tableRowBodyProps?.onClick(row)}>
@@ -54,7 +54,7 @@ const Table = ({
         ))}
       </ScrollReveal>
     </table>
-  </div>
+  </ScrollReveal>
 );
 
 export default memo(Table);

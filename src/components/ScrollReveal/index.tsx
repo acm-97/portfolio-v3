@@ -69,7 +69,7 @@ const ScrollReveal = ({
 
   const singleProps = {
     ref: singleRef,
-    style,
+    style: { ...style, visibility: 'hidden' },
     // 'data-testid': component,
   };
 
@@ -85,7 +85,7 @@ const ScrollReveal = ({
 
   return React.createElement(
     component || 'div',
-    { style, className },
+    { style: { ...style, visibility: 'hidden' }, className },
     children.map((item) => {
       const addToRefsProps = {
         key: uuidv4(),
