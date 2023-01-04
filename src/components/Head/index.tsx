@@ -2,11 +2,13 @@ import { Helmet } from 'react-helmet';
 import { memo } from 'react';
 
 import { SITE_URL, TWITER } from '@/constants';
+import { useTranslation } from 'react-i18next';
 
 type HeadProps = { title?: string | undefined };
 
 const Head = ({ title = '' }: HeadProps) => {
   const twitterUsername = (TWITER as string).split('/');
+  const { i18n } = useTranslation();
 
   const seo = {
     title: 'Portfolio.v3',
@@ -18,7 +20,7 @@ const Head = ({ title = '' }: HeadProps) => {
 
   return (
     <Helmet title={title} defaultTitle={seo.title} titleTemplate={title ? `%s | ${seo.title}` : seo.title}>
-      <html lang="en" />
+      <html lang={i18n.language} />
 
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
@@ -35,7 +37,7 @@ const Head = ({ title = '' }: HeadProps) => {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
 
-      <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" />
+      {/* <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" /> */}
     </Helmet>
   );
 };
