@@ -1,6 +1,7 @@
 export { default as SectionHeader } from './SectionHeader';
 export { default as Link } from './Link';
-export { Icon } from './Icons';
+export { default as Icon } from './Icons/IconRender';
+export { default as LoaderIcon } from './Icons/loader';
 export { default as ScrollReveal } from './ScrollReveal';
 export { default as Button } from './Button';
 export { default as SiteLogo } from './Logo';

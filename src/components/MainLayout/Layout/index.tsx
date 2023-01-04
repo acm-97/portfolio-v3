@@ -5,8 +5,7 @@ import Navbar from '../Navbar';
 
 import { Credits } from '@/modules/containers';
 import { useGithubProjects } from '@/contexts';
-import { Icon, LoaderIcon } from '@/components/Icons';
-import { Button, Socials } from '@/components';
+import { LoaderIcon, Socials } from '@/components';
 
 // type LayoutProps = {};
 
