@@ -20,13 +20,13 @@ const Layout = () => {
     return () => clearTimeout(timeout);
   }, [pathname]);
 
-  if (isLoading || !isMounted) {
-    return (
-      <div className="flex min-h-[100vh] w-full items-center justify-center">
-        <LoaderIcon width={300} />
-      </div>
-    );
-  }
+  // if (isLoading || !isMounted) {
+  return (
+    <div className="flex min-h-[100vh] w-full items-center justify-center">
+      <LoaderIcon width={300} />
+    </div>
+  );
+  // }
 
   return (
     <Navbar>
