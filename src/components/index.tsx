@@ -8,5 +8,6 @@ export { default as SiteLogo } from './Logo';
 export { default as Layout } from './MainLayout';
 export { default as Table } from './Table';
 export { default as Socials } from './Socials';
+export { default as Head } from './Head';
 
 export type { LinkProps } from './Link';

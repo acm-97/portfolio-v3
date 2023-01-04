@@ -2,6 +2,8 @@ export { routes, routesHashes } from './navigation';
 export { privateProjects } from './privateProjects';
 export type { routesHashesProps } from './navigation';
 
+export const SITE_URL = import.meta.env.VITE_SITE_URL;
+
 export const GIT_TOKEN = import.meta.env.VITE_GIT_TOKEN;
 
 export const GMAIL = import.meta.env.VITE_GMAIL;

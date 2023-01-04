@@ -5,7 +5,7 @@ import Navbar from '../Navbar';
 
 import { Credits } from '@/modules/containers';
 import { useGithubProjects } from '@/contexts';
-import { LoaderIcon, Socials } from '@/components';
+import { Head, LoaderIcon, Socials } from '@/components';
 
 // type LayoutProps = {};
 
@@ -22,9 +22,12 @@ const Layout = () => {
 
   if (isLoading || !isMounted) {
     return (
-      <div className="flex min-h-[100vh] w-full items-center justify-center">
-        <LoaderIcon width={300} />
-      </div>
+      <>
+        <Head />
+        <div className="flex min-h-[100vh] w-full items-center justify-center">
+          <LoaderIcon width={300} />
+        </div>
+      </>
     );
   }
 
