@@ -2,15 +2,16 @@ import React from 'react';
 import classnames from 'classnames';
 
 import {
+  ArrowUpIcon,
   ExternalIcon,
   FolderIcon,
   GithubIcon,
-  LinkedInIcon,
-  TwiterIcon,
   InstagramIcon,
   LanguageIcon,
-  ArrowUpIcon,
-} from '@/components/Icons';
+  LinkedInIcon,
+  TwiterIcon,
+} from '.';
+
 import { Link, LinkProps } from '@/components';
 
 type IconProps = { name?: string };
