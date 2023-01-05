@@ -34,6 +34,15 @@
     },
     "spi": {
       "description": "SPI es una serie de scripts en python para recopilar datos de personas en ORCID y en universidades cubanas"
+    },
+    "dopple": {
+      "description": "Creada para hacer la vida de los padres un poco más sensata y mucho más divertida, para ahorrar tiempo y dinero."
+    },
+    "modwell": {
+      "description": "Una empresa tecnológica de diseño cuya plataforma y herramientas colaborativas, pioneras en su género, permiten a agentes y compradores modernizar su experiencia inmobiliaria."
+    },
+    "ejaki": {
+      "description": "Plataforma de comercio electrónico, con el fin de facilitar el acceso al patrimonio cultural cubano a través de una tienda en línea."
     }
   }
 }

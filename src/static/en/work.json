@@ -16,6 +16,15 @@
   },
   "otherProjects": {
     "title": "Other Noteworthy Projects",
-    "archive": "view the entire archive"
+    "archive": "view the entire archive",
+    "dopple": {
+      "description": "Created to make parents' lives a little more sensible and a lot more fun, to save time and money."
+    },
+    "modwell": {
+      "description": "A design tech company whose first-of-its-kind collaborative platform and tools empower agents and buyers to modernize their real estate experience."
+    },
+    "ejaki": {
+      "description": "e-commerce platform, with the purpose of facilitating access to Cuba's cultural heritage through an online store."
+    }
   }
 }

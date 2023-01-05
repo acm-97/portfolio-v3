@@ -4,23 +4,29 @@ import { useTranslation } from 'react-i18next';
 import { memo, useMemo } from 'react';
 
 import { useGithubProjects } from '@/contexts';
+import { privateProjects } from '@/constants';
 import { ScrollReveal, Icon, Link } from '@/components';
 
 // type NoteworthyProjectsProps = {};
 
 const NoteworthyProjects = () => {
-  const { projects: githubProjects, isLoading, omitedProjects } = useGithubProjects();
+  const { projects: githubProjects, isLoading } = useGithubProjects();
   const { t, i18n } = useTranslation('work');
 
   const projects = useMemo(
     () =>
       githubProjects
         .filter(
-          (project) => project?.topics?.length && project?.topics?.length > 0 && !omitedProjects.includes(project.name),
+          (project) =>
+            project?.topics?.length &&
+            project?.topics?.length > 0 &&
+            project?.topics?.some((val) => val === 'react' || val === 'next'),
         )
-        .slice(0, 6),
+        .concat(privateProjects)
+        .slice(0, 6)
+        .reverse(),
 
-    [githubProjects, omitedProjects],
+    [githubProjects],
   );
 
   return (
@@ -44,11 +50,13 @@ const NoteworthyProjects = () => {
                     <div className="flex w-full items-center justify-between ">
                       <Icon name="Folder" className="sec-color h-14 w-[3.1rem] pl-0" />
                       <div className="z-10  flex items-center">
-                        <Icon
-                          name="GitHub"
-                          className="h-[2.45rem]"
-                          linkProps={{ external: true, href: project.github }}
-                        />
+                        {project.github && (
+                          <Icon
+                            name="GitHub"
+                            className="h-[2.45rem]"
+                            linkProps={{ external: true, href: project.github }}
+                          />
+                        )}
                         {project.website && (
                           <Icon
                             name="External"
@@ -59,7 +67,7 @@ const NoteworthyProjects = () => {
                       </div>
                     </div>
                     <h4 className="project-title mb-3 ">
-                      <Link external href={project.website || project.github}>
+                      <Link external href={project.github || project.website}>
                         {project.name}
                       </Link>
                     </h4>
