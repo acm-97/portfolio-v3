@@ -90,7 +90,7 @@ const ScrollReveal = ({
       const addToRefsProps = {
         key: uuidv4(),
         ref: addToRefs,
-        className: item.props?.className || '',
+        // className: item.props?.className || '',
         // 'data-testid': item.type,
       };
 
