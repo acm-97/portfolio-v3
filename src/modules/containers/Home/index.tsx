@@ -25,11 +25,9 @@ const Home = () => {
         {t('occupation.part1')} <span className="sec-color">UI</span> {t('occupation.part2')}.
       </h1>
       <p className="primary-color-dark mt-5 max-w-xl text-xl">{t('description')}</p>
-      <Button className="mt-12">
-        <Link href={CV} download="alejandro_cv.pdf">
-          {t('downloadResume')}
-        </Link>
-      </Button>
+      <Link href={CV} download="alejandro_cv.pdf" className="btn-teal font--mono btn-outline btn mt-12">
+        {t('downloadResume')}
+      </Link>
     </ScrollReveal>
   );
 };
