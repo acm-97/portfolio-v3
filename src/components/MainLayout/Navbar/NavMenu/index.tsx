@@ -19,7 +19,7 @@ const NavMenu = ({ className = '', horizontal = false, drawerInput, handleDrawer
 
   const menuStyles = horizontal
     ? 'menu-horizontal'
-    : 'w-80 bg-base-100 p-4 flex-col justify-center items-center text-3xl';
+    : 'w-80 bg-[#2a303c] p-4 flex-col justify-center items-center text-3xl';
 
   const onClick = () => {
     if (drawerInput?.checked) drawerInput.checked = false;

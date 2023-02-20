@@ -32,31 +32,29 @@ const Table = ({
   tableHeaderProps,
   scrollReveal = false,
 }: TableProps) => (
-  <div className={classnames('overflow-x-auto', containerClass)}>
-    <ScrollReveal delay={!scrollReveal ? 0 : 500}>
-      <table className={classnames('table w-full', tableClass)}>
-        <thead>
-          <tr>
-            {columns.map((col) => (
-              <th key={uuidv4()} {...col.headerCellProps}>
-                {col.headerName}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <ScrollReveal component="tbody" delay={!scrollReveal ? 0 : 500}>
-          {rows.map((row) => (
-            <tr key={uuidv4()} {...tableRowBodyProps} onClick={() => tableRowBodyProps?.onClick(row)}>
-              {columns.map((col) => (
-                <td key={uuidv4()} {...col.cellProps}>
-                  {typeof col.accessor === 'function' ? col.accessor(row) : row[col.accessor]}
-                </td>
-              ))}
-            </tr>
+  <div className={classnames('overflow-x-auto overflow-hidden', containerClass)}>
+    <table className={classnames('table w-full', tableClass)}>
+      <thead>
+        <ScrollReveal component="tr" delay={!scrollReveal ? 0 : 500}>
+          {columns.map((col) => (
+            <th key={uuidv4()} {...col.headerCellProps}>
+              {col.headerName}
+            </th>
           ))}
         </ScrollReveal>
-      </table>
-    </ScrollReveal>
+      </thead>
+      <ScrollReveal component="tbody" delay={!scrollReveal ? 0 : 500}>
+        {rows.map((row) => (
+          <tr key={uuidv4()} {...tableRowBodyProps} onClick={() => tableRowBodyProps?.onClick(row)}>
+            {columns.map((col) => (
+              <td key={uuidv4()} {...col.cellProps}>
+                {typeof col.accessor === 'function' ? col.accessor(row) : row[col.accessor]}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </ScrollReveal>
+    </table>
   </div>
 );
 

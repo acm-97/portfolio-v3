@@ -20,12 +20,7 @@ const ArchivePage = () => {
           <h1>{t('archive')}</h1>
           <p className="sec-color font--mono mt-4 text-sm">{t('list')}</p>
         </ScrollReveal>
-        <Table
-          scrollReveal
-          rows={rows}
-          columns={columns}
-          containerClass="primary-color-dark text-xl mt-24 overflow-y-hidden"
-        />
+        <Table scrollReveal rows={rows} columns={columns} containerClass="primary-color-dark text-xl mt-24 " />
       </main>
     </>
   );
