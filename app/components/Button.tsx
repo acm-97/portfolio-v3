@@ -28,14 +28,35 @@ type ButtonProps = VariantProps<typeof buttonStyles> & {
   color?: string
   href?: string
   locale?: string | false | undefined
+  download?: boolean
 }
 
-const Button = ({className, children, onClick, variant, color, href, locale}: ButtonProps) =>
-  href ? (
-    <Link href={href} locale={locale} className={cls(buttonStyles({variant, color}), className)}>
-      {children}
-    </Link>
-  ) : (
+function Button({
+  className,
+  children,
+  onClick,
+  variant,
+  color,
+  href,
+  locale,
+  download,
+}: ButtonProps) {
+  if (download) {
+    return (
+      <a href={href} className={cls(buttonStyles({variant, color}), className)} download>
+        {children}
+      </a>
+    )
+  }
+
+  if (href) {
+    return (
+      <Link href={href} locale={locale} className={cls(buttonStyles({variant, color}), className)}>
+        {children}
+      </Link>
+    )
+  }
+  return (
     <button
       type="button"
       className={cls(buttonStyles({variant, color}), className)}
@@ -44,5 +65,6 @@ const Button = ({className, children, onClick, variant, color, href, locale}: Bu
       {children}
     </button>
   )
+}
 
 export default memo(Button)

@@ -74,33 +74,30 @@ function About({t, lng}: AboutProps) {
         <li>
           <div className="group relative z-0 max-w-[18.75rem] grayscale hover:grayscale-0 max-md:m-[3.2rem_auto_0]">
             <div className="relative z-10 h-full w-auto overflow-hidden rounded-xl border border-solid border-transparent text-xs font-semibold transition-[0.5s] group-hover:scale-105 group-hover:contrast-[120%]">
-              <div className="relative h-auto w-full ">
-                <Image
-                  priority
-                  sizes="100vw"
-                  alt="profile.png"
-                  objectFit="cover"
-                  src={profileImage}
-                />
-              </div>
+              <Image
+                priority
+                fill
+                sizes="100vw"
+                className="!relative"
+                alt="profile.png"
+                src="/profile.png"
+              />
               <div className="absolute bottom-11 right-[-1000%] z-30 skew-x-[-5deg] bg-primary-main px-4 py-2.5 text-primary-main transition-[0.3s] group-hover:right-[-2%]">
                 {t('about:fullName')}
               </div>
-              <div className="before:content-['</>'] after:content-['</>'] absolute bottom-4 right-[-1000%] z-20 skew-x-[-5deg] bg-teal-main px-4 py-2.5 font-mono text-primary-darker transition-[0.3s] before:mr-1.5 before:text-primary-dark after:ml-1.5 after:text-primary-dark group-hover:right-[-2%]">
+              <div className="absolute bottom-4 right-[-1000%] z-20 skew-x-[-5deg] bg-teal-main px-4 py-2.5 font-mono text-primary-darker transition-[0.3s] before:mr-1.5 before:text-primary-dark before:content-['</>'] after:ml-1.5 after:text-primary-dark after:content-['</>'] group-hover:right-[-2%]">
                 {t('about:occupation')}
               </div>
             </div>
             <div className="absolute left-[7%] top-[6%] -z-10 h-full w-full rounded-xl border border-solid border-teal-main transition-[0.3s] group-hover:scale-105 group-hover:contrast-[120%]">
-              <div className="relative h-auto w-full opacity-0">
-                <Image
-                  priority
-                  fill
-                  sizes="100vw"
-                  alt="profile.png"
-                  src={profileImage}
-                  objectFit="cover"
-                />
-              </div>
+              <Image
+                className="!relative opacity-0"
+                priority
+                fill
+                sizes="100vw"
+                alt="profile.png"
+                src="/profile.png"
+              />
             </div>
           </div>
         </li>

@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  serverRuntimeConfig: {
-    PROJECT_ROOT: __dirname,
-  },
   env: {
     SITE_URL: process.env.SITE_URL,
     GIT_TOKEN: process.env.GIT_TOKEN,

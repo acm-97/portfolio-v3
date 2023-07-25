@@ -24,7 +24,7 @@ const Home = ({t}: ComponentProps) => {
         color="secondary"
         href="/alejandro_cv.pdf"
         className="mt-12 capitalize"
-        locale={false}
+        download
       >
         {t('home:downloadResume')}
       </Button>
