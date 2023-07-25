@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
+.navbar-hiden {
+  transform: translateY(calc(-1 * 6rem));
+  box-shadow: none;
+}
+
+.navbar-boxshadow {
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+#fixed-button {
+  background-color: rgba(42, 42, 42, 0.5);
+  border: transparent;
+}
+
+.fixed-button {
+  display: inherit !important;
+}
+
+@layer components {
+  h1 {
+    font-size: clamp(theme("fontSize.4xl"), 8vw, theme("fontSize.7xl"));
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: clamp(theme("fontSize.3xl"), 5vw, theme("fontSize.6xl"));
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-size: clamp(theme("fontSize.2xl"), 5vw, theme("fontSize.3xl"));
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  h4 {
+    font-size: clamp(theme("fontSize.xl"), 5vw, theme("fontSize.2xl"));
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  h5 {
+    font-size: theme("fontSize.xl");
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  h6 {
+    font-size: theme("fontSize.base");
+    font-weight: 600;
+    line-height: 1.1;
+  }
+}
