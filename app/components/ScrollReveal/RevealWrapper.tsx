@@ -48,7 +48,6 @@ const RevealWrapper: React.FC<RevealWrapperType> = ({
   const Origin = origin ?? reveal.origin
   const Distance = distance ?? reveal.distance
   const Duration = duration ?? reveal.duration
-  const Delay = delay ?? reveal.delay
   const Reset = reset ?? reveal.reset
   const Easing = easing ?? reveal.easing
   const Opacity = opacity ?? reveal.opacity
@@ -65,7 +64,6 @@ const RevealWrapper: React.FC<RevealWrapperType> = ({
     origin: Origin,
     distance: Distance,
     duration: Duration,
-    delay: Delay,
     reset: Reset,
     easing: Easing,
     opacity: Opacity,

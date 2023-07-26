@@ -1,4 +1,4 @@
-import { ProjectsProps } from '@/contexts';
+import {type ProjectsProps} from '@/app/contexts'
 
 export const privateProjects: ProjectsProps[] = [
   {
@@ -6,7 +6,8 @@ export const privateProjects: ProjectsProps[] = [
     name: 'The Dopple',
     fullName: '',
     github: '',
-    description: "Created to make parents' lives a little more sensible and a lot more fun, to save time and money.",
+    description:
+      "Created to make parents' lives a little more sensible and a lot more fun, to save time and money.",
     website: 'https://www.thedopple.com',
     topics: ['typescript', 'nextjs', 'styled-components'],
     createdAt: new Date('1/7/2021'),
@@ -36,4 +37,4 @@ export const privateProjects: ProjectsProps[] = [
     createdAt: new Date('1/4/2022'),
     madeAt: 'Dofleini',
   },
-];
+]

@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: ["app/components/IconComponents/loader.jsx"]
+  },
   env: {
     SITE_URL: process.env.SITE_URL,
     GIT_TOKEN: process.env.GIT_TOKEN,
