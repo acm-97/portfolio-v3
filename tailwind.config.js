@@ -38,6 +38,9 @@ module.exports = {
           dark: `#14b8a6 !important`,
           light: `#99f6e4 !important`,
         },
+        gray: {
+          main: `#ccd6f6 !important`,
+        },
       },
       textColor: {
         primary: {

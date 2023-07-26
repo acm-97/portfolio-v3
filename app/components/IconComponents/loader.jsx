@@ -1,8 +1,10 @@
-'use client'
+'use client' 
+// eslint-disable
+// @ts-nocheck
 
 import { useEffect } from 'react';
 
-const IconLoader = (props: any) => {
+const IconLoader = (props) => {
   useEffect(() => {
     !(function (t, n) {
       'object' == typeof exports && 'undefined' != typeof module

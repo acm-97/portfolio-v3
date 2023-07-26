@@ -36,7 +36,8 @@ const NavMenu = ({
     }
   }
 
-  const handleLanguage = async () => {
+  const handleLanguage = async (e: any) => {
+    e.preventDefault()
     if (i18n.language === 'en') await i18n.changeLanguage('es')
     else await i18n.changeLanguage('en')
   }

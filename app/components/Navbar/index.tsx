@@ -1,12 +1,11 @@
 'use client'
 import {memo, useRef, useEffect, useState, type ReactNode} from 'react'
 import NavMenu from './NavMenu'
-
 import {scrollToTop} from '@/app/utils'
-import {Icon, SiteLogo} from '@/app/components'
-
-// import '@/styles/navbar.css'
+import {Icon, LoaderIcon, SiteLogo} from '@/app/components'
+import {usePathname} from 'next/navigation'
 import Link from 'next/link'
+import {useGithubProjects} from '@/app/contexts'
 
 type NavBarProps = {children: ReactNode; lng: string}
 
@@ -34,6 +33,26 @@ const Navbar = ({children, lng}: NavBarProps) => {
   }, [])
 
   useEffect(() => setDrawerInput(refDrawerInput.current), [refDrawerInput])
+
+  const pathname = usePathname()
+  const {isLoading} = useGithubProjects()
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(false)
+    const timeout = setTimeout(() => setIsMounted(true), 2500)
+    return () => clearTimeout(timeout)
+  }, [pathname])
+
+  if (isLoading || !isMounted) {
+    return (
+      <>
+        <div className="flex min-h-[100vh] w-full items-center justify-center">
+          <LoaderIcon width={300} />
+        </div>
+      </>
+    )
+  }
 
   return (
     <>

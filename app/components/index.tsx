@@ -6,5 +6,6 @@ export {default as Button} from './Button'
 export {default as SiteLogo} from './Logo'
 export {default as Navbar} from './Navbar'
 // export { default as Table } from './Table';
-// export { default as Socials } from './Socials';
+export {default as Socials} from './Socials'
+export {default as Credits} from './Credits'
 export {default as Head} from './Head'
