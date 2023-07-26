@@ -54,8 +54,12 @@ const Icon = ({name}: IconProps) => {
 const IconRender = ({name, className = '', base = false, linkProps}: IconRenderProps) => (
   <div className={classnames('inline-block text-primary-main', !base && ' h-9 w-9 p-2', className)}>
     {linkProps?.href ? (
-      // eslint-disable-next-line tailwindcss/no-custom-classname
-      <Link className="primary hover:text-secondary-main" {...linkProps}>
+      <Link
+        className="hover:text-secondary-main"
+        target="_blank"
+        rel="noreferrer noopener"
+        {...linkProps}
+      >
         <Icon name={name} />
       </Link>
     ) : (

@@ -2,12 +2,14 @@
 import {memo, useEffect, useRef} from 'react'
 import classNames from 'classnames'
 
-import {HideShowNav, scrollToHashSection} from '@/app/utils'
+import {HandleNavBar, scrollToHashSection} from '@/app/utils'
 import {
   Home,
   About,
   Experience,
-  //  MyBuilds, NoteworthyProjects, Contact
+  MyBuilds,
+  NoteworthyProjects,
+  //  Contact
 } from './components'
 import {Head} from '@/app/components'
 import {useTranslation} from '../i18n/client'
@@ -15,7 +17,7 @@ import {useTranslation} from '../i18n/client'
 type HomeProps = {params: {lng: string}}
 
 const HomePage = ({params: {lng}}: HomeProps) => {
-  const {t} = useTranslation(lng, ['home', 'about', 'experience'])
+  const {t} = useTranslation(lng, ['home', 'about', 'experience', 'work'])
 
   const sectionAbout = useRef<HTMLDivElement>(null)
   const sectionExperience = useRef<HTMLDivElement>(null)
@@ -26,18 +28,14 @@ const HomePage = ({params: {lng}}: HomeProps) => {
     {key: 'home', component: <Home t={t} />, ref: null},
     {key: 'about', component: <About t={t} lng={lng} />, ref: sectionAbout},
     {key: 'experience', component: <Experience t={t} />, ref: sectionExperience},
-    // {key: 'work', component: <MyBuilds />, ref: sectionMyBuilds},
-    // {key: 'noteworthyProjects', component: <NoteworthyProjects />, ref: null},
+    {key: 'work', component: <MyBuilds t={t} />, ref: sectionMyBuilds},
+    {key: 'noteworthyProjects', component: <NoteworthyProjects t={t} lng={lng} />, ref: null},
     // {key: 'contact', component: <Contact />, ref: sectionContact},
   ]
 
   useEffect(() => {
-    HideShowNav()
+    HandleNavBar()
   })
-
-  // useEffect(() => {
-  //   showSections();
-  // }, []);
 
   useEffect(() => {
     scrollToHashSection(sectionAbout, sectionExperience, sectionMyBuilds, sectionContact)

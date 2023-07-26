@@ -1,33 +1,22 @@
 import {memo, type ReactNode} from 'react'
-import classNames from 'classnames'
 import Link from 'next/link'
 
 type ExperienceInfoProps = {
-  id: string
   position: string
   project: string
   projectLink?: string
   dateRange: string
   children: ReactNode[]
-  display: boolean
 }
 
 const ExperienceInfo = ({
-  id,
   position,
   project,
   projectLink,
   dateRange,
   children,
-  display,
 }: ExperienceInfoProps) => (
-  <div
-    id={id}
-    className={classNames(
-      display ? 'block' : 'hidden',
-      'tab-content animate-fade-in animation-delay-[0.1s] flex flex-col px-5 py-1',
-    )}
-  >
+  <>
     <h5>
       <>
         {position} <span className="text-secondary-main">@ </span>
@@ -56,7 +45,7 @@ const ExperienceInfo = ({
         </li>
       ))}
     </ul>
-  </div>
+  </>
 )
 
 export default memo(ExperienceInfo)

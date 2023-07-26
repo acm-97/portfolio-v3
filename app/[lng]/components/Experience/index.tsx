@@ -30,7 +30,21 @@ const Experience = ({t}: ExperienceProps) => {
               className={cls(
                 'tab !text-primary-dark w-full !text-left !border-l-[0.2rem] !border-solid !border-gray-dark !justify-start !font-mono !p-[0_1.25rem] !h-10 !overflow-hidden hover:!text-secondary-main hover:!bg-primary-dark max-sm:!border-l-0 max-sm:!border-b-[0.2rem] max-sm:min-w-[100px] max-sm:!p-[0_0.85rem] max-sm:!justify-center',
                 item === activeTab &&
-                  '!border-l-[0.2rem] !border-solid !border-teal-main !text-secondary-main max-sm:!border-l-0 max-sm:!border-b-[0.2rem] max-[480]:w-[calc(100%_+_3.125rem)]',
+                  '!border-l-[0.2rem] !border-solid !border-teal-main !text-secondary-main max-sm:!border-l-0 max-sm:!border-b-[0.2rem]',
+              )}
+              onClick={() => setActiveTab(item)}
+            >
+              <span>{item}</span>
+            </button>
+          ))}
+          {jobs.map(item => (
+            <button
+              key={item}
+              type="button"
+              className={cls(
+                'tab !text-primary-dark w-full !text-left !border-l-[0.2rem] !border-solid !border-gray-dark !justify-start !font-mono !p-[0_1.25rem] !h-10 !overflow-hidden hover:!text-secondary-main hover:!bg-primary-dark max-sm:!border-l-0 max-sm:!border-b-[0.2rem] max-sm:min-w-[100px] max-sm:!p-[0_0.85rem] max-sm:!justify-center',
+                item === activeTab &&
+                  '!border-l-[0.2rem] !border-solid !border-teal-main !text-secondary-main max-sm:!border-l-0 max-sm:!border-b-[0.2rem]',
               )}
               onClick={() => setActiveTab(item)}
             >
@@ -39,36 +53,47 @@ const Experience = ({t}: ExperienceProps) => {
           ))}
         </div>
 
-        <ExperienceInfo
+        <div
           id={jobs[0]}
-          position={t('experience:crai.position')}
-          project="CRAI"
-          projectLink={CRAI}
-          dateRange={t('experience:crai.dateRange')}
-          display={activeTab === jobs[0]}
+          className={cls(
+            activeTab === jobs[0] ? 'block' : 'hidden',
+            'tab-content animate-fade-in animation-delay-[0.1s] flex flex-col px-5 py-1',
+          )}
         >
-          <>{t('experience:crai.description.1')}</>
-          <>{t('experience:crai.description.2')}</>
-        </ExperienceInfo>
-
-        <ExperienceInfo
+          <ExperienceInfo
+            position={t('experience:crai.position')}
+            project="CRAI"
+            projectLink={CRAI}
+            dateRange={t('experience:crai.dateRange')}
+          >
+            <>{t('experience:crai.description.1')}</>
+            <>{t('experience:crai.description.2')}</>
+          </ExperienceInfo>
+        </div>
+        <div
           id={jobs[1]}
-          position={t('experience:dofleini.position')}
-          project="Dofleini"
-          projectLink={DOFLEINI}
-          dateRange={t('experience:dofleini.dateRange')}
-          display={activeTab === jobs[1]}
+          className={cls(
+            activeTab === jobs[1] ? 'block' : 'hidden',
+            'tab-content animate-fade-in animation-delay-[0.1s] flex flex-col px-5 py-1',
+          )}
         >
-          <>
-            <>{t('experience:dofleini.description.1')}</>
-          </>
-          <>
-            <>{t('experience:dofleini.description.2')}</>
-          </>
-          <>
-            <>{t('experience:dofleini.description.3')}</>
-          </>
-        </ExperienceInfo>
+          <ExperienceInfo
+            position={t('experience:dofleini.position')}
+            project="Dofleini"
+            projectLink={DOFLEINI}
+            dateRange={t('experience:dofleini.dateRange')}
+          >
+            <>
+              <>{t('experience:dofleini.description.1')}</>
+            </>
+            <>
+              <>{t('experience:dofleini.description.2')}</>
+            </>
+            <>
+              <>{t('experience:dofleini.description.3')}</>
+            </>
+          </ExperienceInfo>
+        </div>
       </RevealList>
     </div>
   )

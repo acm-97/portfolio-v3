@@ -21,13 +21,6 @@ const Navbar = ({children, lng}: NavBarProps) => {
     } else if (refDrawer?.current) refDrawer.current.style.height = '100%'
   }
 
-  const onScrollToTop = () => {
-    scrollToTop()
-    window.history.pushState
-      ? window.history.pushState('', '/', window.location.pathname)
-      : (window.location.hash = '')
-  }
-
   useEffect(() => {
     setHash(window.location.hash)
   }, [])

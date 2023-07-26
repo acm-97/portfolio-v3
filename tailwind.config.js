@@ -87,8 +87,8 @@ module.exports = {
   plugins: [
     require("daisyui"),
     plugin(function ({ addVariant, addComponents, matchUtilities, theme }) {
-      addVariant("hocus", ["&:hover", "&:focus"]),
-        addVariant("not-last", "&:not(:last-child)"),
+        addVariant("not-last-child", "&:not(:last-child)"),
+        addVariant("not-last-of-type", "&:not(:last-of-type)"),
         matchUtilities(
           {
             "animation-delay": (value) => {
