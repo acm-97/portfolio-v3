@@ -34,12 +34,13 @@ module.exports = {
       },
       colors: {
         teal: {
-          main: `#5eead4 !important`,
-          dark: `#14b8a6 !important`,
-          light: `#99f6e4 !important`,
+          main: "#5eead4 !important",
+          dark: "#14b8a6 !important",
+          light: "#99f6e4 !important",
         },
         gray: {
-          main: `#ccd6f6 !important`,
+          main: "#ccd6f6 !important",
+          dark: "#3f485a !important",
         },
       },
       textColor: {
@@ -49,14 +50,14 @@ module.exports = {
           darker: "#242933 !important",
         },
         secondary: {
-          main: `#5eead4 !important`,
-          dark: `#14b8a6 !important`,
-          light: `#99f6e4 !important`,
+          main: "#5eead4 !important",
+          dark: "#14b8a6 !important",
+          light: "#99f6e4 !important",
         },
       },
       backgroundColor: {
         primary: {
-          main: `#2a303c !important`,
+          main: "#2a303c !important",
           dark: "#242933 !important",
           light: "#3f485a !important",
         },
@@ -66,6 +67,7 @@ module.exports = {
     },
     animation: {
       "fade-in-down": "fade-in-down 0.3s ease-in both",
+      "fade-in": 'fade-in 0.1s ease-in both'
     },
     keyframes: {
       "fade-in-down": {
@@ -82,7 +84,7 @@ module.exports = {
   },
   plugins: [
     require("daisyui"),
-    plugin(function ({ addVariant, matchUtilities, theme }) {
+    plugin(function ({ addVariant, addComponents, matchUtilities, theme }) {
       addVariant("hocus", ["&:hover", "&:focus"]),
         addVariant("not-last", "&:not(:last-child)"),
         matchUtilities(
@@ -96,7 +98,33 @@ module.exports = {
           {
             values: theme("transitionDelay"),
           }
-        );
+        ),
+        addComponents({
+          ".link-underline": {
+            position: "relative",
+            textDecoration: "none",
+            color: "#5eead4",
+            "&:before": {
+              content: "''",
+              position: "absolute",
+              width: "100%",
+              height: "0.01rem",
+              bottom: 0,
+              left: 0,
+              background: "#5eead4 !important",
+              visibility: "hidden",
+              borderRadius: "1rem",
+              transform: "scaleX(0)",
+              transition: "0.25s linear",
+            },
+            "&:hover": {
+              "&:before": {
+                visibility: "visible !important",
+                transform: "scaleX(1) !important",
+              },
+            },
+          },
+        });
     }),
   ],
 };

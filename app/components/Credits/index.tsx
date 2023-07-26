@@ -19,7 +19,7 @@ function Credits({lng}: CreditsProps) {
           components={[
             <Link
               key="inspired"
-              className="underline"
+              className="link-underline"
               target="_blank"
               rel="noopener noreferrer"
               href="https://brittanychiang.com/"
@@ -28,7 +28,7 @@ function Credits({lng}: CreditsProps) {
             </Link>,
             <Link
               key="built"
-              className="underline"
+              className="link-underline"
               target="_blank"
               rel="noopener noreferrer"
               href="https://github.com/acm-97/portfolio-v3"

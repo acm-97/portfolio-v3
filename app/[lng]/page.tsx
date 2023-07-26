@@ -6,7 +6,8 @@ import {HideShowNav, scrollToHashSection} from '@/app/utils'
 import {
   Home,
   About,
-  // Experience, MyBuilds, NoteworthyProjects, Contact
+  Experience,
+  //  MyBuilds, NoteworthyProjects, Contact
 } from './components'
 import {Head} from '@/app/components'
 import {useTranslation} from '../i18n/client'
@@ -14,7 +15,7 @@ import {useTranslation} from '../i18n/client'
 type HomeProps = {params: {lng: string}}
 
 const HomePage = ({params: {lng}}: HomeProps) => {
-  const {t} = useTranslation(lng, ['home', 'about'])
+  const {t} = useTranslation(lng, ['home', 'about', 'experience'])
 
   const sectionAbout = useRef<HTMLDivElement>(null)
   const sectionExperience = useRef<HTMLDivElement>(null)
@@ -24,7 +25,7 @@ const HomePage = ({params: {lng}}: HomeProps) => {
   const sections = [
     {key: 'home', component: <Home t={t} />, ref: null},
     {key: 'about', component: <About t={t} lng={lng} />, ref: sectionAbout},
-    // {key: 'experience', component: <Experience />, ref: sectionExperience},
+    {key: 'experience', component: <Experience t={t} />, ref: sectionExperience},
     // {key: 'work', component: <MyBuilds />, ref: sectionMyBuilds},
     // {key: 'noteworthyProjects', component: <NoteworthyProjects />, ref: null},
     // {key: 'contact', component: <Contact />, ref: sectionContact},
