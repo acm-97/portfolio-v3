@@ -3,21 +3,14 @@ import {memo, useEffect, useRef} from 'react'
 import classNames from 'classnames'
 
 import {HandleNavBar, scrollToHashSection} from '@/app/utils'
-import {
-  Home,
-  About,
-  Experience,
-  MyBuilds,
-  NoteworthyProjects,
-  //  Contact
-} from './components'
+import {Home, About, Experience, MyBuilds, NoteworthyProjects, Contact} from './components'
 import {Head} from '@/app/components'
 import {useTranslation} from '../i18n/client'
 
 type HomeProps = {params: {lng: string}}
 
 const HomePage = ({params: {lng}}: HomeProps) => {
-  const {t} = useTranslation(lng, ['home', 'about', 'experience', 'work'])
+  const {t} = useTranslation(lng, ['common', 'home', 'about', 'experience', 'work'])
 
   const sectionAbout = useRef<HTMLDivElement>(null)
   const sectionExperience = useRef<HTMLDivElement>(null)
@@ -30,7 +23,7 @@ const HomePage = ({params: {lng}}: HomeProps) => {
     {key: 'experience', component: <Experience t={t} />, ref: sectionExperience},
     {key: 'work', component: <MyBuilds t={t} />, ref: sectionMyBuilds},
     {key: 'noteworthyProjects', component: <NoteworthyProjects t={t} lng={lng} />, ref: null},
-    // {key: 'contact', component: <Contact />, ref: sectionContact},
+    {key: 'contact', component: <Contact t={t} />, ref: sectionContact},
   ]
 
   useEffect(() => {
