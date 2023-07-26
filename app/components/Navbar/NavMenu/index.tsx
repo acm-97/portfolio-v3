@@ -2,7 +2,7 @@ import {memo} from 'react'
 import cls from 'classnames'
 
 import {routesHashes} from '@/app/constants'
-import {Icon} from '@/app/components'
+import {Button, Icon} from '@/app/components'
 import {useTranslation} from '@/app/i18n/client'
 import Link from 'next/link'
 
@@ -36,10 +36,12 @@ const NavMenu = ({
     }
   }
 
-  const handleLanguage = async (e: any) => {
+  const handleLanguage = (e: any) => {
     e.preventDefault()
-    if (i18n.language === 'en') await i18n.changeLanguage('es')
-    else await i18n.changeLanguage('en')
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    if (i18n.language === 'en') i18n.changeLanguage('es')
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    else i18n.changeLanguage('en')
   }
 
   return (
@@ -69,14 +71,13 @@ const NavMenu = ({
         </li>
       ))}
       <li className="my-auto animate-fade-in-down px-0">
-        <button
-          type="button"
+        <Button
           onClick={handleLanguage}
           className="btn mt-14 h-14 gap-2 rounded text-secondary-main md:min-h-6 max-md:text-2xl md:mt-0 md:h-8 "
         >
           <Icon name="Language" base className={!horizontal ? 'h-6 w-6' : 'h-4 w-4'} />
           {i18n.language}
-        </button>
+        </Button>
       </li>
     </ul>
   )

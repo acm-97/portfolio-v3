@@ -35,8 +35,9 @@ module.exports = {
       colors: {
         teal: {
           main: "#5eead4 !important",
-          dark: "#14b8a6 !important",
           light: "#99f6e4 !important",
+          dark: "#14b8a6 !important",
+          darker: "#134e4a !important",
         },
         gray: {
           main: "#ccd6f6 !important",
@@ -58,8 +59,9 @@ module.exports = {
       backgroundColor: {
         primary: {
           main: "#2a303c !important",
-          dark: "#242933 !important",
           light: "#3f485a !important",
+          dark: "#242933 !important",
+          darker: "#242933 !important",
         },
         // accent: (this) => this.theme.extend.textColor.secondary ,
         hover: "#2e3542 !important",

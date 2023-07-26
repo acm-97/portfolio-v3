@@ -19,13 +19,7 @@ const Home = ({t}: ComponentProps) => {
         {t('home:occupation.part2')}.
       </h1>
       <p className="mt-5 max-w-xl text-xl text-primary-dark">{t('home:description')}</p>
-      <Button
-        variant="outlined"
-        color="secondary"
-        href="/alejandro_cv.pdf"
-        className="mt-12 capitalize"
-        download
-      >
+      <Button variant="outlined" href="/alejandro_cv.pdf" className="mt-12 capitalize" download>
         {t('home:downloadResume')}
       </Button>
     </RevealList>
