@@ -41,7 +41,7 @@ const Navbar = ({children, lng}: NavBarProps) => {
     return (
       <>
         <div className="flex min-h-[100vh] w-full items-center justify-center">
-          <LoaderIcon width={300} />
+          <LoaderIcon />
         </div>
       </>
     )
