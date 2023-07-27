@@ -1,10 +1,10 @@
 import {memo} from 'react'
 import cls from 'classnames'
-
 import {routesHashes} from '@/app/constants'
 import {Button, Icon} from '@/app/components'
 import {useTranslation} from '@/app/i18n/client'
-import Link from 'next/link'
+import NextLink from 'next/link'
+import {usePathname} from 'next/navigation'
 
 type NavMenuProps = {
   horizontal?: boolean
@@ -12,8 +12,6 @@ type NavMenuProps = {
   drawerInput?: HTMLInputElement | null
   handleDrawer?: (checked: boolean) => void
   lng: string
-  hash: string
-  setHash: (hash: string) => void
 }
 
 const NavMenu = ({
@@ -22,14 +20,13 @@ const NavMenu = ({
   drawerInput,
   handleDrawer,
   lng,
-  hash,
-  setHash,
 }: NavMenuProps) => {
   const {t, i18n} = useTranslation(lng, 'common')
+  const pathname = usePathname()
 
-  const onClick = (hash: string) => {
-    setHash(hash)
+  const isHome = pathname !== `/${lng}`
 
+  const onClick = () => {
     if (!horizontal) {
       if (drawerInput?.checked) drawerInput.checked = false
       handleDrawer?.(false)
@@ -54,17 +51,17 @@ const NavMenu = ({
           'menu h-full w-80 flex-col items-center justify-center bg-[#2a303c] p-4 text-3xl',
       )}
     >
-      {routesHashes.map(({name, hash: _hash}, i) => (
+      {routesHashes.map(({name, hash}, i) => (
         <li key={name} className={'group animate-fade-in-down p-3.5'}>
           <Link
-            // reloadDocument={pathname === '/'}
+            isHome={isHome}
             className={cls(
               'group-hover:text-secondary-main gap-1 px-0 hover:bg-transparent focus:bg-transparent',
               !horizontal && 'flex flex-col',
-              hash === _hash && 'text-secondary-main',
+              window.location.hash === hash && 'text-secondary-main',
             )}
-            href={`${_hash}`}
-            onClick={() => onClick(_hash)}
+            href={hash}
+            onClick={onClick}
           >
             <span className="p-0 text-secondary-main">{`0${i + 1}.`}</span> {t(name.toLowerCase())}
           </Link>
@@ -80,6 +77,16 @@ const NavMenu = ({
         </Button>
       </li>
     </ul>
+  )
+}
+
+function Link({children, isHome, ...props}: any) {
+  return isHome ? (
+    <a {...props} href={`/${props.href as string}`}>
+      {children}
+    </a>
+  ) : (
+    <NextLink {...props}>{children}</NextLink>
   )
 }
 
