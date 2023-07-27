@@ -19,9 +19,6 @@ export function middleware(req) {
   if (!lng) lng = acceptLanguage.get(req.headers.get("Accept-Language"));
   if (!lng) lng = fallbackLng;
 
-  console.log(whiteList, "===whiteList");
-  console.log(req.url, "===req.url");
-
   if (!whiteList.some((ext) => req.url.endsWith(ext))) {
     // Redirect if lng in path is not supported
     if (
