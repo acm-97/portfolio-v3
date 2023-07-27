@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  html.sr .load-hidden {
+    visibility: hidden;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #ccd6f6;
+    border: 3px solid #2a303c;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #2a303c;
+  }
+
+  h1 {
+    font-size: clamp(theme("fontSize.4xl"), 8vw, theme("fontSize.7xl"));
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: clamp(theme("fontSize.3xl"), 5vw, theme("fontSize.6xl"));
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-size: clamp(theme("fontSize.2xl"), 5vw, theme("fontSize.3xl"));
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  h4 {
+    font-size: clamp(theme("fontSize.xl"), 5vw, theme("fontSize.2xl"));
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  h5 {
+    font-size: theme("fontSize.xl");
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  h6 {
+    font-size: theme("fontSize.base");
+    font-weight: 600;
+    line-height: 1.1;
+  }
+}
