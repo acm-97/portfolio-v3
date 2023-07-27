@@ -27,7 +27,7 @@ const Socials = () => (
       <div className="m-0 flex flex-col items-center p-0 tracking-widest text-primary-main after:m-[0_auto] after:block after:h-24 after:w-[1px] after:bg-gray-main after:content-['']">
         <Link
           href={`https://mail.google.com/mail/?view=cm&fs=1&to=${GMAIL as string}`}
-          className=" mx-auto my-5 p-2 font-mono text-xs tracking-widest text-primary-main [writing-mode:vertical-lr] "
+          className=" mx-auto my-5 p-2 font-mono text-xs tracking-widest text-primary-main [writing-mode:vertical-lr] hover:text-secondary-main"
           target="_blank"
           rel="noopener noreferrer"
         >
