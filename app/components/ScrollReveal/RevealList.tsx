@@ -1,6 +1,7 @@
 'use client'
 import {useRef, useEffect, createRef, Children, createElement, cloneElement} from 'react'
 import {reveal} from './reveal'
+import cls from 'classnames'
 
 type RevealListType = {
   children: React.ReactNode
@@ -102,7 +103,7 @@ const RevealList: React.FC<RevealListType> = ({
     revElement()
   }, [])
 
-  return createElement(component ?? 'div', {className}, revealList)
+  return createElement(component ?? 'div', {className: cls(className, 'load-hidden')}, revealList)
 }
 
 export default RevealList
