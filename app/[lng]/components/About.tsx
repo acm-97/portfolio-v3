@@ -3,7 +3,7 @@ import {Trans} from 'react-i18next'
 import {CRAI, DOFLEINI} from '@/app/constants'
 import {SectionHeader as Header, RevealList, RevealWrapper} from '@/app/components'
 import Image from 'next/image'
-import profileImage from '../../../public/profile.png'
+import profile2Image from '../../../public/profile2.png'
 
 type AboutProps = {t: any; lng: string}
 
@@ -79,8 +79,8 @@ function About({t, lng}: AboutProps) {
                 fill
                 sizes="100vw"
                 className="!relative"
-                alt="profile.png"
-                src="/profile.png"
+                alt="profile2.png"
+                src="/profile2.png"
               />
               <div className="absolute bottom-11 right-[-1000%] z-30 skew-x-[-5deg] bg-primary-main px-4 py-2.5 text-primary-main transition-[0.3s] group-hover:right-[-2%]">
                 {t('about:fullName')}
@@ -95,8 +95,8 @@ function About({t, lng}: AboutProps) {
                 priority
                 fill
                 sizes="100vw"
-                alt="profile.png"
-                src="/profile.png"
+                alt="profile2.png"
+                src="/profile2.png"
               />
             </div>
           </div>
