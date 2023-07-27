@@ -22,7 +22,7 @@ function Credits({lng}: CreditsProps) {
               className="link-underline"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://brittanychiang.com/"
+              href="https://github.com/bchiang7/v4"
             >
               Brittany Chiang
             </Link>,
