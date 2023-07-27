@@ -1,6 +1,7 @@
 'use client'
 import {useRef, useEffect, createElement} from 'react'
 import {reveal} from './reveal'
+import cls from 'classnames'
 
 type RevealWrapperType = {
   children: React.ReactNode
@@ -94,7 +95,11 @@ const RevealWrapper: React.FC<RevealWrapperType> = ({
     revElement()
   }, [])
 
-  return createElement(component ?? 'div', {className, ref}, children)
+  return createElement(
+    component ?? 'div',
+    {className: cls(className, 'load-hidden'), ref},
+    children,
+  )
 }
 
 export default RevealWrapper
