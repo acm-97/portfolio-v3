@@ -1,4 +1,3 @@
-import {v4 as uuidv4} from 'uuid'
 import {memo} from 'react'
 import classnames from 'classnames'
 
@@ -34,19 +33,23 @@ const Table = ({
   <div className={classnames('overflow-hidden overflow-x-auto', containerClass)}>
     <table className={classnames('table w-full', tableClass)}>
       <thead>
-        <RevealList component="tr" interval={200} delay={500}>
+        <RevealList component="tr" interval={200} delay={500} {...tableHeaderProps}>
           {columns.map(col => (
-            <th key={uuidv4()} {...col.headerCellProps}>
+            <th key={col.headerName} {...col.headerCellProps}>
               {col.headerName}
             </th>
           ))}
         </RevealList>
       </thead>
       <RevealList component="tbody" interval={200} delay={500}>
-        {rows.map(row => (
-          <tr key={uuidv4()} {...tableRowBodyProps} onClick={() => tableRowBodyProps?.onClick(row)}>
+        {rows.map((row, id) => (
+          <tr
+            key={`tr-${id}`}
+            {...tableRowBodyProps}
+            onClick={() => tableRowBodyProps?.onClick(row)}
+          >
             {columns.map(col => (
-              <td key={uuidv4()} {...col.cellProps}>
+              <td key={`td-${col.headerName as string}`} {...col.cellProps}>
                 {typeof col.accessor === 'function' ? col.accessor(row) : row[col.accessor]}
               </td>
             ))}

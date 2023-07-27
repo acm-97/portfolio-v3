@@ -9,39 +9,38 @@ const useArchive = () => {
     {
       headerName: 'Year',
       accessor: ({createdAt}: ProjectsProps) => createdAt.getFullYear(),
-      cellProps: {className: 'bg-transparent border-transparent sec-color font--mono text-lg'},
+      cellProps: {className: 'bg-transparent text-secondary-main font-mono text-lg'},
       headerCellProps: {
-        className: 'bg-transparent border-transparent text-xl  normal-case bg-transparent',
+        className: 'bg-transparent text-xl text-primary-main normal-case bg-transparent',
       },
     },
     {
       headerName: 'Title',
       accessor: 'name',
-      cellProps: {className: 'bg-transparent border-transparent whitespace-normal primary-color'},
+      cellProps: {className: 'bg-transparent whitespace-normal text-primary-main'},
       headerCellProps: {
-        className: 'bg-transparent border-transparent text-xl  normal-case bg-transparent',
+        className: 'bg-transparent text-xl text-primary-main normal-case bg-transparent',
       },
     },
     {
       headerName: 'Made at',
       accessor: ({madeAt}: ProjectsProps) => madeAt || '--',
       cellProps: {
-        className: 'bg-transparent max-md:hidden border-transparent primary-color text-base',
+        className: 'bg-transparent max-md:hidden text-primary-main text-base',
       },
       headerCellProps: {
         className:
-          'bg-transparent max-md:hidden border-transparent text-xl  normal-case bg-transparent',
+          'bg-transparent max-md:hidden text-xl text-primary-main normal-case bg-transparent',
       },
     },
     {
       headerName: 'Build with',
       cellProps: {
-        className:
-          'bg-transparent max-md:hidden border-transparent whitespace-normal font--mono text-xs',
+        className: 'bg-transparent max-md:hidden whitespace-normal font-mono text-xs',
       },
       headerCellProps: {
         className:
-          'bg-transparent max-md:hidden border-transparent text-xl  normal-case bg-transparent',
+          'bg-transparent max-md:hidden text-xl text-primary-main normal-case bg-transparent',
       },
       accessor: ({name, topics}: ProjectsProps) =>
         topics && topics.length > 0
@@ -55,9 +54,9 @@ const useArchive = () => {
     },
     {
       headerName: 'Links',
-      cellProps: {className: 'bg-transparent border-transparent'},
+      cellProps: {className: 'bg-transparent'},
       headerCellProps: {
-        className: 'bg-transparent border-transparent text-xl  normal-case bg-transparent',
+        className: 'bg-transparent text-xl text-primary-main normal-case bg-transparent',
       },
       accessor: ({website, github}: ProjectsProps) => (
         <>
