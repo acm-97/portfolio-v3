@@ -10,6 +10,7 @@ export const config = {
 };
 
 const cookieName = "i18next";
+const whiteList = [".jpg", ".png", ".pdf", ".svg"];
 
 export function middleware(req) {
   let lng;
@@ -18,7 +19,7 @@ export function middleware(req) {
   if (!lng) lng = acceptLanguage.get(req.headers.get("Accept-Language"));
   if (!lng) lng = fallbackLng;
 
-  if (!req.url.endsWith(".pdf") && !req.url.endsWith(".svg")) {
+  if (!whiteList.some((ext) => req.url.endsWith(ext))) {
     // Redirect if lng in path is not supported
     if (
       !languages.some((loc) => req.nextUrl.pathname.startsWith(`/${loc}`)) &&
