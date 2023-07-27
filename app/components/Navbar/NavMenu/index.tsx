@@ -4,7 +4,7 @@ import {routesHashes} from '@/app/constants'
 import {Button, Icon} from '@/app/components'
 import {useTranslation} from '@/app/i18n/client'
 import NextLink from 'next/link'
-import {usePathname} from 'next/navigation'
+import {useRouter, usePathname} from 'next/navigation'
 
 type NavMenuProps = {
   horizontal?: boolean
@@ -23,6 +23,7 @@ const NavMenu = ({
 }: NavMenuProps) => {
   const {t, i18n} = useTranslation(lng, 'common')
   const pathname = usePathname()
+  const {push} = useRouter()
 
   const isHome = pathname !== `/${lng}`
 
@@ -34,11 +35,10 @@ const NavMenu = ({
   }
 
   const handleLanguage = (e: any) => {
-    e.preventDefault()
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
-    if (i18n.language === 'en') i18n.changeLanguage('es')
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
-    else i18n.changeLanguage('en')
+    // e.preventDefault()
+    if (i18n.language === 'en') {
+      push(pathname.replace(lng, 'es'))
+    } else push(pathname.replace(lng, 'en'))
   }
 
   return (
