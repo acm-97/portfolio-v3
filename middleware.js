@@ -18,7 +18,7 @@ export function middleware(req) {
   if (!lng) lng = acceptLanguage.get(req.headers.get("Accept-Language"));
   if (!lng) lng = fallbackLng;
 
-  if (!req?.headers?.get("accept")?.includes("image") && !req.url.endsWith(".pdf")) {
+  if (!req.url.endsWith(".pdf") && !req.url.endsWith(".svg")) {
     // Redirect if lng in path is not supported
     if (
       !languages.some((loc) => req.nextUrl.pathname.startsWith(`/${loc}`)) &&

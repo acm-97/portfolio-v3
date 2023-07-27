@@ -13,17 +13,12 @@ const Navbar = ({children, lng}: NavBarProps) => {
   const refDrawer = useRef<HTMLDivElement>(null)
   const refDrawerInput = useRef<HTMLInputElement>(null)
   const [drawerInput, setDrawerInput] = useState<HTMLInputElement | null>(null)
-  const [hash, setHash] = useState<string>('')
 
   const handleChecked = (checked: boolean) => {
     if (checked && refDrawer?.current) {
       refDrawer.current.style.height = '100dvh'
     } else if (refDrawer?.current) refDrawer.current.style.height = '100%'
   }
-
-  useEffect(() => {
-    setHash(window.location.hash)
-  }, [])
 
   useEffect(() => setDrawerInput(refDrawerInput.current), [refDrawerInput])
 
@@ -61,12 +56,12 @@ const Navbar = ({children, lng}: NavBarProps) => {
           {/* <!-- Navbar --> */}
           <div className="navbar fixed left-0 top-0 z-[999] h-16 w-full bg-[#2a303cd9] px-4 text-sm backdrop-blur-sm transition-transform delay-75 sm:px-9">
             <div className="mx-2 flex-1 px-2">
-              <Link href="/" className="rounded-lg px-2 hover:bg-hover" onClick={() => setHash('')}>
+              <Link href="/" className="rounded-lg px-2 hover:bg-hover">
                 <SiteLogo />
               </Link>
             </div>
             <div className="hidden flex-none md:block">
-              <NavMenu hash={hash} setHash={setHash} lng={lng} horizontal />
+              <NavMenu lng={lng} horizontal />
             </div>
             <div className="flex-none md:hidden">
               {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
@@ -95,13 +90,7 @@ const Navbar = ({children, lng}: NavBarProps) => {
         <div className="drawer-side z-[1200] md:hidden">
           {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label htmlFor="my-drawer-3" className="drawer-overlay" />
-          <NavMenu
-            hash={hash}
-            setHash={setHash}
-            lng={lng}
-            drawerInput={drawerInput}
-            handleDrawer={handleChecked}
-          />
+          <NavMenu lng={lng} drawerInput={drawerInput} handleDrawer={handleChecked} />
         </div>
       </div>
     </>
