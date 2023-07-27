@@ -4,9 +4,9 @@ import {useArchive} from '@/app/hooks'
 import {Head, RevealList, Table} from '@/app/components'
 import {useTranslation} from '@/app/i18n/client'
 
-type ArchivePageProps = {lng: string}
+type ArchivePageProps = {params: {lng: string}}
 
-function ArchivePage({lng}: ArchivePageProps) {
+function ArchivePage({params: {lng}}: ArchivePageProps) {
   const {columns, rows} = useArchive()
   const {t} = useTranslation(lng, 'work')
 
