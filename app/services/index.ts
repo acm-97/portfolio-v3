@@ -1,1 +1,1 @@
-export { fetchProjects, gitProjects } from './projects.service';
+export {fetchProjects, gitProjects} from './projects.service'

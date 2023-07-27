@@ -1,6 +1,6 @@
 export const scrollToTop = () => {
-  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-};
+  window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
+}
 
 export const scrollToHashSection = (
   sectionAbout: any,
@@ -9,20 +9,20 @@ export const scrollToHashSection = (
   sectionContact: any,
 ) => {
   if (sectionAbout.current && window.location.hash === '#about') {
-    sectionAbout.current.scrollIntoView();
-    return;
+    sectionAbout.current.scrollIntoView()
+    return
   }
   if (sectionExperience.current && window.location.hash === '#experience') {
-    sectionExperience.current.scrollIntoView();
-    return;
+    sectionExperience.current.scrollIntoView()
+    return
   }
   if (sectionWork.current && window.location.hash === '#work') {
-    sectionWork.current.scrollIntoView();
-    return;
+    sectionWork.current.scrollIntoView()
+    return
   }
   if (sectionContact.current && window.location.hash === '#contact') {
-    sectionContact.current.scrollIntoView();
-    return;
+    sectionContact.current.scrollIntoView()
+    return
   }
-  scrollToTop();
-};
+  scrollToTop()
+}

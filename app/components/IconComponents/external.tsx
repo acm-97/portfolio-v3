@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const IconExternal = () => (
   <svg
@@ -17,6 +17,6 @@ const IconExternal = () => (
     <polyline points="15 3 21 3 21 9" />
     <line x1="10" y1="14" x2="21" y2="3" />
   </svg>
-);
+)
 
-export default IconExternal;
+export default IconExternal
