@@ -2,19 +2,30 @@
   "title": "Where I’ve Worked",
   "crai": {
     "position": "Engeneer",
-    "dateRange": "Sep 2020 - Present",
+    "dateRange": "Sep 2020 - Dec 2022",
     "description": {
-      "1": "Use of a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Python, Angular, Proxmox and WordPress.",
-      "2": "I worked with a team of developers to create a series of web applications to facilitate the monitoring and evaluation of scientific publications at the Cuban national level."
+      "1": "Worked with a team to create a repository of cuban scientific publications.",
+      "2": "Created a Python script for better researcher identification using data from sources such as ORCID and LDAP protocol.",
+      "3": "Proposed and implemented the migration of older versions of Angular to the latest, reducing production bundle sizes and loading times.",
+      "4": "Performed quality assurance tests on various sites to ensure cross‑browser compatibility and mobile responsiveness."
     }
   },
   "dofleini": {
     "position": "Front-End Developer",
-    "dateRange": "Jul 2021 - May 2022",
+    "dateRange": "Jul 2021 - Mar 2022",
     "description": {
-      "1": "Developed and maintained code for in-house and client websites primarily using JavaScript, TypeScript, React.js, Next.js, and CSS.",
-      "2": "I worked on different types of national and international projects such as: e-commerce and project management systems.",
-      "3": "Daily interaction with the rest of the development team and with customers, providing support and giving and receiving feedback on finished and in-process features."
+      "1": "Developed and maintained code for in‑house and client websites primarily using HTML, CSS, Sass, JavaScript, React and NextJs.",
+      "2": "Collaborated with product team members to implement new feature development.",
+      "3": "Clients included: Tek‑Task, The Dopple, Modwell, FCBC and more."
+    }
+  },
+  "double2": {
+    "position": "Front-End Developer",
+    "dateRange": "Dec 2022 ‑ Present",
+    "description": {
+      "1": "Deliver high‑quality, robust production code for a diverse array of projects for clients including: EVERYMUNDO, SmartBarrel and more.",
+      "2": "Managed the migration of legacy JavaScript code.",
+      "3": "Collaborated with designers and other developers to ensure thoughtful and consistent user experiences."
     }
   }
 }

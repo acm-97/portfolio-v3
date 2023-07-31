@@ -2,19 +2,30 @@
   "title": "Donde he trabajado",
   "crai": {
     "position": "Ingeniero",
-    "dateRange": "Sep 2022 - Presente",
+    "dateRange": "Sep 2020 - Dec 2022",
     "description": {
-      "1": "Uso de una variedad de diferentes lenguajes, plataformas, marcos y sistemas de gestión de contenidos como JavaScript, TypeScript, Python, Angular, Proxmox y WordPress.",
-      "2": "Trabajé con un equipo de desarrolladores para crear una serie de aplicaciones web destinadas a facilitar el seguimiento y la evaluación de las publicaciones científicas a nivel nacional cubano."
+      "1": "Trabajé con un equipo para crear un repositorio de publicaciones científicas cubanas.",
+      "2": "Creé un script en Python para una mejor identificación de investigadores usando datos de fuentes como ORCID y el protocolo LDAP.",
+      "3": "Propuse e implementé la migración de versiones antiguas de Angular a la última, reduciendo el tamaño de los bundles de producción y los tiempos de carga.",
+      "4": "Realización de pruebas de control de calidad en varios sitios para garantizar la compatibilidad entre navegadores y la capacidad de respuesta móvil."
     }
   },
   "dofleini": {
     "position": "Front-End Developer",
-    "dateRange": "Jul 2021 - May 2022",
+    "dateRange": "Jul 2021 - Mar 2022",
     "description": {
-      "1": "Desarrollo y mantenimiento de código para sitios web internos y de clientes utilizando principalmente JavaScript, TypeScript, React.js, Next.js y CSS.",
-      "2": "Trabajé en diferentes tipos de proyectos nacionales e internacionales como: comercio electrónico y sistemas de gestión de proyectos.",
-      "3": "Interacción diaria con el resto del equipo de desarrollo y con los clientes, proporcionando apoyo y dando y recibiendo comentarios sobre las funciones terminadas y en proceso."
+      "1": "Desarrollo y mantenimiento de código para sitios web internos y de clientes utilizando principalmente HTML, CSS, Sass, JavaScript, React y NextJs.",
+      "2": "Colaboró con los miembros del equipo de producto para implementar nuevos desarrollos de características.",
+      "3": "Clientes incluidos: Tek-Task, Dopple, Modwell, FCBC y más."
+    }
+  },
+  "double2": {
+    "position": "Front-End Developer",
+    "dateRange": "Dec 2022 ‑ Present",
+    "description": {
+      "1": "Entregar código de producción robusto y de alta calidad para una amplia gama de proyectos para clientes como: EVERYMUNDO, SmartBarrel y más.",
+      "2": "Gestión de la migración de código JavaScript heredado.",
+      "3": "Colaboración con diseñadores y otros desarrolladores para garantizar experiencias de usuario coherentes y bien pensadas."
     }
   }
 }
