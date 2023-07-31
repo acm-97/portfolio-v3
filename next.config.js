@@ -6,6 +6,7 @@ const nextConfig = {
     GMAIL: process.env.GMAIL,
     CRAI: process.env.CRAI,
     DOFLEINI: process.env.DOFLEINI,
+    DOFLEINI: process.env.DOUBLE2,
     LINKEDIN: process.env.LINKEDIN,
     INSTAGRAM: process.env.INSTAGRAM,
     GITHUB: process.env.GITHUB,

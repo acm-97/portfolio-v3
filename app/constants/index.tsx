@@ -10,6 +10,7 @@ export const GMAIL = process.env.GMAIL
 
 export const CRAI = process.env.CRAI
 export const DOFLEINI = process.env.DOFLEINI
+export const DOUBLE2 = process.env.DOUBLE2
 
 export const LINKEDIN = process.env.LINKEDIN
 export const INSTAGRAM = process.env.INSTAGRAM
