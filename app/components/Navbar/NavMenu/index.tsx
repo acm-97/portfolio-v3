@@ -35,10 +35,9 @@ const NavMenu = ({
   }
 
   const handleLanguage = (e: any) => {
-    // e.preventDefault()
     if (i18n.language === 'en') {
-      push(pathname.replace(lng, 'es'))
-    } else push(pathname.replace(lng, 'en'))
+      push(`${pathname.replace(lng, 'es')}/${window.location.hash}`)
+    } else push(`${pathname.replace(lng, 'en')}/${window.location.hash}`)
   }
 
   return (
