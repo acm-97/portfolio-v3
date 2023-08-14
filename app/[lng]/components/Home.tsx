@@ -7,7 +7,7 @@ const Home = ({t}: ComponentProps) => {
   return (
     <RevealList
       className="flex w-full flex-col items-start text-start"
-      delay={800}
+      delay={600}
       interval={200}
       easing="ease-in"
     >

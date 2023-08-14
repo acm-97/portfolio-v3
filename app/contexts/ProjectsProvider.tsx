@@ -8,7 +8,7 @@ export type ProjectsProps = {
   name: string
   fullName: string
   github: string
-  description: string
+  description?: string
   website: string
   topics?: string[] | []
   createdAt: Date

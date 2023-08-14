@@ -12,23 +12,23 @@ const NoteworthyProjects = ({t, lng}: NoteworthyProjectsProps) => {
 
   const projects = useMemo(
     () =>
-      githubProjects
-        .filter(
-          project =>
-            project?.topics?.length &&
-            project?.topics?.length > 0 &&
-            project?.topics?.some(val => val === 'react' || val === 'next'),
+      privateProjects
+        .concat(
+          githubProjects.filter(
+            project =>
+              project?.topics?.length &&
+              project?.topics?.length > 0 &&
+              project?.topics?.some(val => val === 'react' || val === 'next'),
+          ),
         )
-        .concat(privateProjects)
-        .slice(0, 6)
-        .reverse(),
+        .slice(0, 6),
 
     [githubProjects],
   )
 
   return (
     <>
-      <RevealList delay={800} interval={200} className="text-center">
+      <RevealList delay={500} interval={200} className="text-center">
         <h3 className="mb-4">{t('work:otherProjects.title')}</h3>
         <div>
           <Button href="/archive" className="text-sm">
@@ -43,7 +43,7 @@ const NoteworthyProjects = ({t, lng}: NoteworthyProjectsProps) => {
           <RevealList
             component="ul"
             className="relative mt-4 grid list-none grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4 p-0"
-            delay={800}
+            delay={500}
             interval={200}
             origin="left"
           >
@@ -81,9 +81,7 @@ const NoteworthyProjects = ({t, lng}: NoteworthyProjectsProps) => {
                       <h4>{project.name}</h4>
                     </Link>
                     <div className="text-primary-dark">
-                      {lng === 'en'
-                        ? project.description
-                        : t(`otherProjects.${project.name}.description`)}
+                      {project.description ?? t(`work:otherProjects.${project.name}.description`)}
                     </div>
                   </header>
                   <footer className="w-full">

@@ -8,41 +8,26 @@
       "description": "Segunda iteración de mi sitio web personal. Está pensado para parecerse a un terminal linux pero con un poco más de estilo y tiene algunas de las funciones que encontrarás en un terminal estándar."
     },
     "snakegame": {
-      "description": "Basado en la idea de los clásicos juegos de la serpiente, con la salvedad de que éste acepta algunas opciones, lo que lo hace más personalizable y quizás más divertido. Disponible en los repositorios<0>{{npm}}</0> si quieres jugar con él. Y si encuentras algún error házmelo saber. (^_~)."
+      "description": "Basado en la idea de los clásicos juegos de la serpiente, con la salvedad de que éste acepta algunas opciones, lo que lo hace más personalizable y quizás más divertido. Disponible en los repositorios <0>{{npm}}</0> si quieres jugar con él. Y si encuentras algún error házmelo saber. (^_~)."
     },
     "eslintprettier": {
-      "description": "Disponible en los repositorios<0>{{npm}}</0>. Hecho con las reglas de eslint y prettier que uso en mis proyectos. Por supuesto siempre puedes sobreescribirlas con tus propias reglas, si asi lo deseas."
+      "description": "Disponible en los repositorios <0>{{npm}}</0>. Hecho con las reglas de eslint y prettier que uso en mis proyectos. Por supuesto siempre puedes sobreescribirlas con tus propias reglas, si asi lo deseas."
     }
   },
   "otherProjects": {
     "title": "Otros Proyectos Destacados",
     "archive": "ver todos los archivos",
-    "cuor-ng": {
-      "description": "Se trata de un Sistema de Identificación de Organizaciones, una de las herramientas de Sceiba, para mejorar el control de calidad y el seguimiento de las publicaciones científicas cubanas a nivel nacional e institucional."
-    },
-    "JavaScript-Challenges": {
-      "description": "Una mezcla de retos javascript para practicar y mejorar la lógica de programación."
-    },
-    "people-ng": {
-      "description": "Gestiona los perfiles de los investigadores científicos, identificando a cada uno de ellos de forma única y facilitando la desambiguación de perfiles."
-    },
-    "portfolio-v1": {
-      "description": "Primera versión de mi cartera personal"
-    },
-    "sceiba-ng": {
-      "description": "Espacio de colaboración e interrelación entre instituciones, investigadores, docentes, editores, bibliotecarios y otros profesionales de Cuba y el resto del mundo."
-    },
-    "spi": {
-      "description": "SPI es una serie de scripts en python para recopilar datos de personas en ORCID y en universidades cubanas"
-    },
-    "dopple": {
+    "The Dopple": {
       "description": "Creada para hacer la vida de los padres un poco más sensata y mucho más divertida, para ahorrar tiempo y dinero."
     },
-    "modwell": {
+    "Modwell": {
       "description": "Una empresa tecnológica de diseño cuya plataforma y herramientas colaborativas, pioneras en su género, permiten a agentes y compradores modernizar su experiencia inmobiliaria."
     },
-    "ejaki": {
+    "Ejakí": {
       "description": "Plataforma de comercio electrónico, con el fin de facilitar el acceso al patrimonio cultural cubano a través de una tienda en línea."
+    },
+    "SmartBarrel": {
+      "description": "Gracias a la biometría y la inteligencia artificial, SmartBarrel automatiza por completo el control del tiempo y garantiza una precisión del 100%."
     }
   }
 }

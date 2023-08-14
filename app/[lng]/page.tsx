@@ -1,5 +1,5 @@
 'use client'
-import {memo, useEffect, useRef} from 'react'
+import {memo, useEffect, useMemo, useRef} from 'react'
 import classNames from 'classnames'
 
 import {HandleNavBar, scrollToHashSection} from '@/app/utils'
@@ -17,14 +17,17 @@ const HomePage = ({params: {lng}}: HomeProps) => {
   const sectionMyBuilds = useRef<HTMLDivElement>(null)
   const sectionContact = useRef<HTMLDivElement>(null)
 
-  const sections = [
-    {key: 'home', component: <Home t={t} />, ref: null},
-    {key: 'about', component: <About t={t} lng={lng} />, ref: sectionAbout},
-    {key: 'experience', component: <Experience t={t} />, ref: sectionExperience},
-    {key: 'work', component: <MyBuilds t={t} />, ref: sectionMyBuilds},
-    {key: 'noteworthyProjects', component: <NoteworthyProjects t={t} lng={lng} />, ref: null},
-    {key: 'contact', component: <Contact t={t} />, ref: sectionContact},
-  ]
+  const sections = useMemo(
+    () => [
+      {key: 'home', component: <Home t={t} />, ref: null},
+      {key: 'about', component: <About t={t} lng={lng} />, ref: sectionAbout},
+      {key: 'experience', component: <Experience t={t} />, ref: sectionExperience},
+      {key: 'work', component: <MyBuilds t={t} />, ref: sectionMyBuilds},
+      {key: 'noteworthyProjects', component: <NoteworthyProjects t={t} lng={lng} />, ref: null},
+      {key: 'contact', component: <Contact t={t} />, ref: sectionContact},
+    ],
+    [t, lng],
+  )
 
   useEffect(() => {
     HandleNavBar()
