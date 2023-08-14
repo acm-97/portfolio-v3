@@ -34,10 +34,14 @@ const NavMenu = ({
     }
   }
 
-  const handleLanguage = (e: any) => {
+  const handleLanguage = async (e: any) => {
     if (i18n.language === 'en') {
       push(`${pathname.replace(lng, 'es')}/${window.location.hash}`)
-    } else push(`${pathname.replace(lng, 'en')}/${window.location.hash}`)
+      await i18n.changeLanguage('es')
+    } else {
+      push(`${pathname.replace(lng, 'en')}/${window.location.hash}`)
+      await i18n.changeLanguage('en')
+    }
   }
 
   return (

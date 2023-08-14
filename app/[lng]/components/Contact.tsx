@@ -7,7 +7,7 @@ type ContactProps = {t: any}
 
 const Contact = ({t}: ContactProps) => {
   return (
-    <RevealList delay={800} interval={200} className="mx-auto mb-24 max-w-[37.5rem] text-center">
+    <RevealList delay={500} interval={200} className="mx-auto mb-24 max-w-[37.5rem] text-center">
       <h6 className="mb-2 block font-mono font-normal text-secondary-main">
         04. {t('common:contactSection.title')}
       </h6>

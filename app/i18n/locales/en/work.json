@@ -17,14 +17,17 @@
   "otherProjects": {
     "title": "Other Noteworthy Projects",
     "archive": "view the entire archive",
-    "dopple": {
+    "The Dopple": {
       "description": "Created to make parents' lives a little more sensible and a lot more fun, to save time and money."
     },
-    "modwell": {
+    "Modwell": {
       "description": "A design tech company whose first-of-its-kind collaborative platform and tools empower agents and buyers to modernize their real estate experience."
     },
-    "ejaki": {
+    "Ejakí": {
       "description": "e-commerce platform, with the purpose of facilitating access to Cuba's cultural heritage through an online store."
+    },
+    "SmartBarrel": {
+      "description": "Powered by biometrics and AI, SmartBarrel completely automates time tracking and guarantees 100% accuracy."
     }
   }
 }
