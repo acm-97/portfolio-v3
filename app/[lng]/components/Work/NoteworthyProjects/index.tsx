@@ -73,12 +73,12 @@ const NoteworthyProjects = ({t, lng}: NoteworthyProjectsProps) => {
                     </div>
                     {/* project-title */}
                     <Link
-                      className="mb-3 text-secondary-main before:absolute before:left-0 before:top-0 before:z-0 before:block before:h-full before:w-full before:content-[''] hover:text-secondary-dark"
+                      className="text-secondary-main before:absolute before:left-0 before:top-0 before:z-0 before:block before:h-full before:w-full before:content-[''] hover:text-secondary-dark"
                       target="_blank"
                       rel="noopener noreferrer"
                       href={project.github || project.website}
                     >
-                      <h4>{project.name}</h4>
+                      <h4 className="mb-3">{project.name}</h4>
                     </Link>
                     <div className="text-primary-dark">
                       {project.description ?? t(`work:otherProjects.${project.name}.description`)}
