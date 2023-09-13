@@ -10,8 +10,9 @@
     "snakegame": {
       "description": "Based on the idea of the classic snake games, with the exception that this one accepts some options, which makes it more customizable and maybe more fun. Available in <0>{{npm}}</0> repositories if you want to play with it. And if you find any bugs let me know (^_~)."
     },
-    "eslintprettier": {
-      "description": "Available in <0>{{npm}}</0> repositories. Made with the eslint and prettier rules I use in my projects. Of course you can always overwrite them with your own rules, if you wish."
+    "managementSystem": {
+      "title": "Management System",
+      "description": "Made for small bussines. It helps to mantain the track of sales, investments, ...etc"
     }
   },
   "otherProjects": {

@@ -10,8 +10,9 @@
     "snakegame": {
       "description": "Basado en la idea de los clásicos juegos de la serpiente, con la salvedad de que éste acepta algunas opciones, lo que lo hace más personalizable y quizás más divertido. Disponible en los repositorios <0>{{npm}}</0> si quieres jugar con él. Y si encuentras algún error házmelo saber. (^_~)."
     },
-    "eslintprettier": {
-      "description": "Disponible en los repositorios <0>{{npm}}</0>. Hecho con las reglas de eslint y prettier que uso en mis proyectos. Por supuesto siempre puedes sobreescribirlas con tus propias reglas, si asi lo deseas."
+    "managementSystem": {
+      "title": "Sistema de Gestión",
+      "description": "Hecho para pequeños negocios. Ayuda a mantener un seguimiento de los gastos, inversiones, ...etc"
     }
   },
   "otherProjects": {
