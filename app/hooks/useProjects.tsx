@@ -14,6 +14,14 @@ const useProjects = () => {
   const {t} = useTranslation('work')
   const personalProjects: PersonalProjectsProps[] = [
     {
+      name: t('myBuilds.managementSystem.title'),
+      description: t('myBuilds.managementSystem.description'),
+      keyWords: ['Astro', 'React.js', 'TailwindCSS', 'Strapi'],
+      github: 'https://github.com/acm-97/management-system',
+      website: 'https://management-system-tan.vercel.app/',
+      image: '/projects/management-system.png',
+    },
+    {
       name: 'ACMFolio',
       description: t('myBuilds.acmfolio.description'),
       keyWords: ['React', 'Styled Components', 'TypeScript'],
@@ -40,26 +48,6 @@ const useProjects = () => {
       github: 'https://github.com/acm-97/react-snake-game',
       website: 'https://acm-97.github.io/react-snake-game/',
       image: '/projects/snakegame.png',
-    },
-    {
-      name: 'Eslint-Prettier Config',
-      description: (
-        <Trans
-          defaults={t('myBuilds.eslintprettier.description')}
-          values={{npm: 'NPM'}}
-          components={[
-            <a
-              key={'eslintprettier'}
-              className="underline"
-              href="https://www.npmjs.com/package/@acm-97/eslint-prettier-config"
-            />,
-          ]}
-        />
-      ),
-      keyWords: ['Eslint', 'Prettier', 'NPM'],
-      github: 'https://github.com/acm-97/eslint-prettier-config',
-      website: '',
-      image: '/projects/eslintprettier.png',
     },
   ]
 
