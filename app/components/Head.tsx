@@ -18,6 +18,7 @@ function Head({title, lng}: HeadProps) {
     image: `${SITE_URL as string}/portfolio-v3.png`,
     url: SITE_URL,
     twitterUsername: twitterUsername[twitterUsername.length - 1],
+    favicon: `${SITE_URL as string}/logo.svg`
   }
 
   return (
@@ -42,6 +43,8 @@ function Head({title, lng}: HeadProps) {
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
+
+      <link rel="icon" href={seo.favicon} type="image/svg+xml" />
 
       {/* <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" /> */}
     </Helmet>
