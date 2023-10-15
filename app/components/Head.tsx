@@ -18,7 +18,7 @@ function Head({title, lng}: HeadProps) {
     image: `${SITE_URL as string}/portfolio-v3.png`,
     url: SITE_URL,
     twitterUsername: twitterUsername[twitterUsername.length - 1],
-    favicon: `${SITE_URL as string}/logo.svg`
+    favicon: `${SITE_URL as string}/logo.svg`,
   }
 
   return (
