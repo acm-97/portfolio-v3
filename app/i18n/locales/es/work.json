@@ -2,33 +2,35 @@
   "archive": "Archivo",
   "list": "Una lista de cosas en las que he trabajado",
   "myBuilds": {
-    "title": "Cosas que he construido",
-    "featured": "Proyecto destacado",
+    "title": "Algunas Cosas Que He Construido",
+    "featured": "Proyecto Destacado",
     "acmfolio": {
-      "description": "Segunda iteración de mi sitio web personal. Está pensado para parecerse a un terminal linux pero con un poco más de estilo y tiene algunas de las funciones que encontrarás en un terminal estándar."
+      "description": "Segunda iteración de mi sitio web personal. Está diseñado para parecerse a un terminal de Linux, pero con un poco más de estilo y algunas de las funciones que encontrarás en un terminal estándar."
     },
     "snakegame": {
-      "description": "Basado en la idea de los clásicos juegos de la serpiente, con la salvedad de que éste acepta algunas opciones, lo que lo hace más personalizable y quizás más divertido. Disponible en los repositorios <0>{{npm}}</0> si quieres jugar con él. Y si encuentras algún error házmelo saber. (^_~)."
-    },
-    "managementSystem": {
-      "title": "Sistema de Gestión",
-      "description": "Hecho para pequeños negocios. Ayuda a mantener un seguimiento de los gastos, inversiones, ...etc"
+      "description": "Basado en la idea de los juegos clásicos de la serpiente, con la excepción de que este acepta algunas opciones, lo que lo hace más personalizable y tal vez más divertido. Disponible en los repositorios de <0>{{npm}}</0> si quieres probarlo. Y si encuentras algún error, házmelo saber (^_~)."
     }
   },
   "otherProjects": {
-    "title": "Otros Proyectos Destacados",
-    "archive": "ver todos los archivos",
+    "title": "Proyectos Notables",
+    "archive": "ver todo el archivo",
+    "TwingBooks": {
+      "description": "Un sistema de gestión de inventarios que ofrece la visibilidad, agilidad y control necesarios para tomar decisiones informadas rápidamente."
+    },
+    "Lit Data": {
+      "description": "Una aplicación para crear informes en tiempo real y transformar datos en bruto en informes significativos sin esfuerzo."
+    },
+    "Global International Imports": {
+      "description": "Un mercado con un amplio catálogo de productos, con servicios al por mayor y al por menor."
+    },
     "The Dopple": {
-      "description": "Creada para hacer la vida de los padres un poco más sensata y mucho más divertida, para ahorrar tiempo y dinero."
+      "description": "Creado para hacer la vida de los padres un poco más sensata y mucho más divertida, ahorrando tiempo y dinero."
     },
     "Modwell": {
-      "description": "Una empresa tecnológica de diseño cuya plataforma y herramientas colaborativas, pioneras en su género, permiten a agentes y compradores modernizar su experiencia inmobiliaria."
+      "description": "Una empresa de tecnología de diseño cuya plataforma colaborativa única y herramientas empoderan a agentes y compradores para modernizar su experiencia inmobiliaria."
     },
     "Ejakí": {
-      "description": "Plataforma de comercio electrónico, con el fin de facilitar el acceso al patrimonio cultural cubano a través de una tienda en línea."
-    },
-    "SmartBarrel": {
-      "description": "Gracias a la biometría y la inteligencia artificial, SmartBarrel automatiza por completo el control del tiempo y garantiza una precisión del 100%."
+      "description": "Plataforma de comercio electrónico, con el propósito de facilitar el acceso al patrimonio cultural de Cuba a través de una tienda en línea."
     }
   }
 }

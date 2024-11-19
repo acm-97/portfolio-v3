@@ -11,7 +11,7 @@ export const routesHashes = [
   // { name: 'Home', path: '/' },
   {name: 'About', hash: '#about'},
   {name: 'Experience', hash: '#experience'},
-  {name: 'Work', hash: '#work'},
+  {name: 'Work', hash: '#noteworthyProjects'},
   {name: 'Contact', hash: '#contact'},
 ]
 

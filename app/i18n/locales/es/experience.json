@@ -1,31 +1,49 @@
 {
-  "title": "Donde he trabajado",
+  "title": "Dónde He Trabajado",
   "crai": {
-    "position": "Ingeniero",
-    "dateRange": "Sep 2020 - Dec 2022",
+    "position": "Full Stack",
+    "dateRange": "09/2020 a 12/2022",
     "description": {
       "1": "Trabajé con un equipo para crear un repositorio de publicaciones científicas cubanas.",
-      "2": "Creé un script en Python para una mejor identificación de investigadores usando datos de fuentes como ORCID y el protocolo LDAP.",
-      "3": "Propuse e implementé la migración de versiones antiguas de Angular a la última, reduciendo el tamaño de los bundles de producción y los tiempos de carga.",
-      "4": "Realización de pruebas de control de calidad en varios sitios para garantizar la compatibilidad entre navegadores y la capacidad de respuesta móvil."
+      "2": "Creé un script en Python para mejorar la identificación de investigadores utilizando datos de fuentes como ORCID y el protocolo LDAP.",
+      "3": "Propuse e implementé la migración de versiones anteriores de Angular a la más reciente, reduciendo el tamaño de los paquetes de producción y los tiempos de carga.",
+      "4": "Realicé pruebas de aseguramiento de calidad en varios sitios para garantizar la compatibilidad entre navegadores y la capacidad de respuesta móvil."
     }
   },
   "dofleini": {
-    "position": "Front-End Developer",
-    "dateRange": "Jul 2021 - Mar 2022",
+    "position": "Desarrollador Front-End",
+    "dateRange": "07/2021 a 03/2022",
     "description": {
-      "1": "Desarrollo y mantenimiento de código para sitios web internos y de clientes utilizando principalmente HTML, CSS, Sass, JavaScript, React y NextJs.",
-      "2": "Colaboró con los miembros del equipo de producto para implementar nuevos desarrollos de características.",
-      "3": "Clientes incluidos: Tek-Task, Dopple, Modwell, FCBC y más."
+      "1": "Desarrollé y mantuve código de producción de alto rendimiento en múltiples proyectos para clientes como Tek-Task, The Dopple, Modwell y FCBC, utilizando frameworks modernos como React y Next.js, logrando soluciones robustas y escalables que superaron las expectativas del cliente.",
+      "2": "Colaboré de manera efectiva con diseñadores y desarrolladores para entregar experiencias de usuario cohesivas e intuitivas, utilizando React y Next.js para mejorar el compromiso del usuario y agilizar la integración de diseño.",
+      "3": "Optimizé interfaces de usuario aplicando principios de diseño intuitivo, asegurando una funcionalidad fluida y mejorando la satisfacción del usuario, lo que impulsó mayores tasas de retención y compromiso en los proyectos."
+    }
+  },
+  "mitimiti": {
+    "position": "Desarrollador Front-End",
+    "dateRange": "10/2023 a 04/2024",
+    "description": {
+      "1": "Entregué código de producción de alta calidad y robustez para el proyecto Lit Data, asegurando la finalización del proyecto a tiempo y alineado con los objetivos del cliente.",
+      "2": "Colaboré con diseñadores y desarrolladores para mejorar la experiencia del usuario, fomentando una comunicación fluida que resultó en una implementación de diseño coherente en todo el proyecto.",
+      "3": "Me adapté a las cambiantes demandas del proyecto mediante la resolución colaborativa de problemas, contribuyendo al logro exitoso de hitos críticos del proyecto."
+    }
+  },
+  "initium": {
+    "position": "Desarrollador Front-End",
+    "dateRange": "04/2024 a 10/2024",
+    "description": {
+      "1": "Entregué código de producción de alta calidad y robustez para el proyecto Lit Data, asegurando la finalización del proyecto a tiempo y alineado con los objetivos del cliente.",
+      "2": "Colaboré con diseñadores y desarrolladores para mejorar la experiencia del usuario, fomentando una comunicación fluida que resultó en una implementación de diseño coherente en todo el proyecto.",
+      "3": "Me adapté a las cambiantes demandas del proyecto mediante la resolución colaborativa de problemas, contribuyendo al logro exitoso de hitos críticos del proyecto."
     }
   },
   "double2": {
-    "position": "Front-End Developer",
-    "dateRange": "Dec 2022 ‑ Present",
+    "position": "Desarrollador Front-End",
+    "dateRange": "12/2022 a Actualidad",
     "description": {
-      "1": "Entregar código de producción robusto y de alta calidad para una amplia gama de proyectos para clientes como: EVERYMUNDO, SmartBarrel y más.",
-      "2": "Gestión de la migración de código JavaScript heredado.",
-      "3": "Colaboración con diseñadores y otros desarrolladores para garantizar experiencias de usuario coherentes y bien pensadas."
+      "1": "Desarrollé código de producción de alta calidad para varios proyectos, mejorando la funcionalidad del sistema para clientes destacados como EV-ERYMUNDO y Smart Barrel, impulsando la satisfacción del cliente y el éxito del proyecto.",
+      "2": "Lideré la implementación completa de la interfaz de usuario para TwinBooks, un sistema de gestión de inventarios, asegurando una interfaz intuitiva y fácil de usar que mejoró la usabilidad y la experiencia del usuario.",
+      "3": "Gestioné la migración de código JavaScript obsoleto a frameworks modernos, aumentando el rendimiento, la escalabilidad y el mantenimiento del sistema."
     }
   }
 }

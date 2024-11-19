@@ -1,9 +1,9 @@
 {
   "title": "About Me",
   "history": {
-    "part1": "I am a computer engineering graduate since July 2020. I discovered my love for web development during the 5th year of my degree, when I decided to do my graduation thesis with a web application, creating my first application with JavaScript, HTML and CSS.",
-    "part2": "In September 2020 I started my career as a professional developer at the <0>{{crai}}</0>, of the University of Pinar del Río, participating in the development of scripts, API's and web applications. Over time I gained experience, I worked for a <1>{{dofleini}}</1>, where I participated in several national and international projects.",
-    "part3": "Here are a few technologies I’ve been working with recently:"
+    "part1": "From an early age, I was captivated by the inner workings of software and technology, sparking a curiosity about how applications are built. This passion led me to pursue a degree in Informatics Engineering, where I developed a strong foundation in software development.",
+    "part2": "Over the past years, I’ve gained extensive experience in web development, contributing to a variety of projects and teams. My technical expertise spans HTML, CSS, and JavaScript, with a primary focus on ReactJS. Recently, I expanded my skill set by working on mobile applications using React Native.",
+    "part3": "Here are some of my skills:"
   },
   "fullName": "Alejandro Cabrera Mena",
   "occupation": "Front-End Developer"
