@@ -10,7 +10,7 @@ export const config = {
 };
 
 const cookieName = "i18next";
-const whiteList = [".jpg", ".png", ".pdf", ".svg"];
+const whiteList = [".jpg", ".png", ".pdf", ".svg", 'jpeg'];
 
 export function middleware(req) {
   let lng;
