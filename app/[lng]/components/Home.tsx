@@ -20,7 +20,12 @@ const Home = ({t}: ComponentProps) => {
       </h1>
       <p className="mt-5 max-w-xl text-xl text-primary-dark">{t('home:description')}</p>
       <div>
-        <Button variant="outlined" href="/alejandro_cv.pdf" className="mt-12 capitalize" download>
+        <Button
+          variant="outlined"
+          href="/alejandro-resume.pdf"
+          className="mt-12 capitalize"
+          download
+        >
           {t('home:downloadResume')}
         </Button>
       </div>

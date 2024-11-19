@@ -14,14 +14,6 @@ const useProjects = () => {
   const {t} = useTranslation('work')
   const personalProjects: PersonalProjectsProps[] = [
     {
-      name: t('myBuilds.managementSystem.title'),
-      description: t('myBuilds.managementSystem.description'),
-      keyWords: ['Astro', 'React.js', 'TailwindCSS', 'Strapi'],
-      github: 'https://github.com/acm-97/management-system',
-      website: 'https://management-system-tan.vercel.app/',
-      image: '/projects/management-system.png',
-    },
-    {
       name: 'ACMFolio',
       description: t('myBuilds.acmfolio.description'),
       keyWords: ['React', 'Styled Components', 'TypeScript'],

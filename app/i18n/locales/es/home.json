@@ -1,10 +1,10 @@
 {
-  "salute": "Hola extraño, mi nombre es",
+  "salute": "Hola desconocido, mi nombre es",
   "name": "Alejandro Cabrera.",
   "occupation": {
     "part1": "Construyo",
     "part2": "para la web"
   },
-  "description": "Soy un Desarrollador de Software con 3 años de experiencia, sin miedo a los retos y siempre abierto a nuevas ofertas o experiencias laborales.",
+  "description": "Desarrollador Front-End con más de 5 años de experiencia en la creación de aplicaciones web y móviles receptivas y de alto rendimiento. Experto en frameworks modernos como ReactJS y NextJS, optimizo interfaces de usuario y resuelvo desafíos, ofreciendo experiencias de usuario fluidas y atractivas en múltiples plataformas.",
   "downloadResume": "Descargar Currículum"
 }

@@ -9,15 +9,20 @@
     },
     "snakegame": {
       "description": "Based on the idea of the classic snake games, with the exception that this one accepts some options, which makes it more customizable and maybe more fun. Available in <0>{{npm}}</0> repositories if you want to play with it. And if you find any bugs let me know (^_~)."
-    },
-    "managementSystem": {
-      "title": "Management System",
-      "description": "Made for small bussines. It helps to mantain the track of sales, investments, ...etc"
     }
   },
   "otherProjects": {
-    "title": "Other Noteworthy Projects",
+    "title": "Noteworthy Projects",
     "archive": "view the entire archive",
+    "TwingBooks": {
+      "description": "An inventory management system that offers the visibility, agility, and control that is needed to make informed decisions swiftly"
+    },
+    "Lit Data": {
+      "description": "An app to craft reports Real Time and transform raw data into meaningful reports effortlessly."
+    },
+    "Global International Imports": {
+      "description": "A marketplace with a wide catalog of products, with wholesale and retail services."
+    },
     "The Dopple": {
       "description": "Created to make parents' lives a little more sensible and a lot more fun, to save time and money."
     },
@@ -26,9 +31,6 @@
     },
     "Ejakí": {
       "description": "e-commerce platform, with the purpose of facilitating access to Cuba's cultural heritage through an online store."
-    },
-    "SmartBarrel": {
-      "description": "Powered by biometrics and AI, SmartBarrel completely automates time tracking and guarantees 100% accuracy."
     }
   }
 }

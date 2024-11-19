@@ -1,8 +1,8 @@
 {
   "title": "Where I’ve Worked",
   "crai": {
-    "position": "Engeneer",
-    "dateRange": "Sep 2020 - Dec 2022",
+    "position": "Full Stack",
+    "dateRange": "9/2020 to 12/2022",
     "description": {
       "1": "Worked with a team to create a repository of cuban scientific publications.",
       "2": "Created a Python script for better researcher identification using data from sources such as ORCID and LDAP protocol.",
@@ -12,20 +12,38 @@
   },
   "dofleini": {
     "position": "Front-End Developer",
-    "dateRange": "Jul 2021 - Mar 2022",
+    "dateRange": "07/2021 to 03/2022",
     "description": {
-      "1": "Developed and maintained code for in‑house and client websites primarily using HTML, CSS, Sass, JavaScript, React and NextJs.",
-      "2": "Collaborated with product team members to implement new feature development.",
-      "3": "Clients included: Tek‑Task, The Dopple, Modwell, FCBC and more."
+      "1": "Engineered and maintained high-performance production code across multiple projects for clients including Tek-Task, The Dopple, Modwell, and FCBC, utilizing modern frameworks such as React and Next.js, resulting in robust, scalable solutions that exceeded client expectations.",
+      "2": "Collaborated effectively with designers and developers to deliver cohesive and intuitive user experiences, leveraging React and Next.js to enhance user engagement and streamline design integration.",
+      "3": "Optimized user interfaces by applying intuitive design principles, ensuring seamless functionality and improved user satisfaction, driving higher user retention and engagement rates across projects."
+    }
+  },
+  "mitimiti": {
+    "position": "Front-End Developer",
+    "dateRange": "10/2023 to 04/2024",
+    "description": {
+      "1": "Delivered high-quality, robust production code for the Lit Data project, ensuring on-time project completion and alignment with client objectives.",
+      "2": "Collaborated with designers and developers to enhance user experience, fostering seamless communication that led to consistent design implementation across the project.",
+      "3": "Adapted to changing project demands by embracing collaborative problem-solving, contributing to the successful achievement of critical project milestones."
+    }
+  },
+  "initium": {
+    "position": "Front-End Developer",
+    "dateRange": "04/2024 to 10/2024",
+    "description": {
+      "1": "Delivered high-quality, robust production code for the Lit Data project, ensuring on-time project completion and alignment with client objectives.",
+      "2": "Collaborated with designers and developers to enhance user experience, fostering seamless communication that led to consistent design implementation across the project.",
+      "3": "Adapted to changing project demands by embracing collaborative problem-solving, contributing to the successful achievement of critical project milestones."
     }
   },
   "double2": {
     "position": "Front-End Developer",
-    "dateRange": "Dec 2022 ‑ Present",
+    "dateRange": "12/2022 to Current",
     "description": {
-      "1": "Deliver high‑quality, robust production code for a diverse array of projects for clients including: EVERYMUNDO, SmartBarrel and more.",
-      "2": "Managed the migration of legacy JavaScript code.",
-      "3": "Collaborated with designers and other developers to ensure thoughtful and consistent user experiences."
+      "1": "Developed high-quality production code for various projects, enhancing system functionality for prominent clients like EV-ERYMUNDO and Smart Barrel, driving client satisfaction and project success.",
+      "2": "Led the full UI implementation for TwinBooks, an inventory management system, ensuring an intuitive and user-friendly interface that improved usability and user experience.",
+      "3": "Managed the migration from outdated JavaScript code to modern frameworks, increasing system performance, scalability, and maintainability."
     }
   }
 }
