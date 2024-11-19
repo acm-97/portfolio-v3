@@ -33,16 +33,6 @@ export const privateProjects: ProjectsProps[] = [
   },
   {
     id: '',
-    name: 'SmartBarrel',
-    fullName: '',
-    github: '',
-    website: 'https://smartbarrel.io',
-    topics: ['javascript', 'nextjs', 'react', 'MUI', 'tailwindcss'],
-    createdAt: new Date('1/1/2023'),
-    madeAt: 'Double2',
-  },
-  {
-    id: '',
     name: 'The Dopple',
     fullName: '',
     github: '',
@@ -70,5 +60,15 @@ export const privateProjects: ProjectsProps[] = [
     topics: ['typescript', 'nextjs', 'react', 'emotion/react'],
     createdAt: new Date('1/4/2022'),
     madeAt: 'Dofleini',
+  },
+  {
+    id: '',
+    name: 'SmartBarrel',
+    fullName: '',
+    github: '',
+    website: 'https://smartbarrel.io',
+    topics: ['javascript', 'nextjs', 'react', 'MUI', 'tailwindcss'],
+    createdAt: new Date('1/1/2023'),
+    madeAt: 'Double2',
   },
 ]
